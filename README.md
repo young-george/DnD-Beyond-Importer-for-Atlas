@@ -1,8 +1,12 @@
 <div align="center">
 
+*DnD Beyond Importer for Atlas VTT is a community extension. It is not made, endorsed or supported by Atlas VTT or Atlas Online.*
+
 # D&D Beyond Importer for Atlas VTT
 
 ### Import any public D&D Beyond character sheet into Obsidian as a ready to use statblock for Atlas VTT.
+
+<img src="assets/compatible-with-atlas-vtt-dark.svg" />
 
 </div>
 
@@ -19,7 +23,7 @@
 1. Open **Settings**
 2. Go to **Community plugins**
 3. Click **Browse**
-4. Search **"D&D Beyond Importer for Atlas"**
+4. Search **"DnD Beyond Importer for Atlas"**
 5. Click **Install**, then **Enable**
 6. Configure plugin settings *(optional)*
 
@@ -51,7 +55,7 @@ Run tests with `vitest` and accept any valid changes to the snapshots.
 
 **Ribbon:** click the <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus preview-icon"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg> import D&D Beyond character icon in the left sidebar.
 
-**Command palette:** `Ctrl/Cmd + P` → *D&D Beyond Importer for Atlas: Import character from D&D Beyond*
+**Command palette:** `Ctrl/Cmd + P` → *DnD Beyond Importer for Atlas: Import character from D&D Beyond*
 
 Any of these input formats work:
 - Full URL — `https://www.dndbeyond.com/characters/131905892/Gk8rBed`
@@ -61,16 +65,16 @@ Any of these input formats work:
 > The character sheet must be set to **Public** on D&D Beyond. Private sheets can't be fetched.
 
 ### Override Statblock Template
-The default character sheet statblock can be overridden by specifying 
+The default character sheet statblock template can be overridden using the Atlas interface, or by specifying the template in the statblock note frontmatter. This change will be remembered for future imports of the same character.
 
 ---
 
 ## Commands
 
-`D&D Beyond Importer for Atlas: Import character from D&D Beyond`:
+`DnD Beyond Importer for Atlas: Import character from D&D Beyond`:
 Import a character sheet from D&D Beyond into Obsidian as a statblock note for Atlas VTT.
 
-`D&D Beyond Importer for Atlas: Sync all imported characters`:
+`DnD Beyond Importer for Atlas: Sync all imported characters`:
 Re-sync all previously imported character sheets with D&D Beyond.
 
 ---
