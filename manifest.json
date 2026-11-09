@@ -1,0 +1,10 @@
+{
+  "id": "dndbeyond-importer-for-atlas",
+  "name": "DnD Beyond Importer for Atlas",
+  "version": "1.0.0",
+  "minAppVersion": "1.13.0",
+  "description": "Import public D&D Beyond characters as Atlas VTT compatible statblocks into your vault.",
+  "author": "young-george",
+  "authorUrl": "https://github.com/young-george",
+  "isDesktopOnly": true
+}

@@ -1,0 +1,4058 @@
+{
+  "format": "atlas-statblock-template",
+  "version": 1,
+  "id": "5e-2024-character-sheet-pips-4r8tqz",
+  "description": "5E (2024 rules) character sheet, with toggleable use pips for actions, bonus actions, reactions, class features, species traits and feats.",
+  "diceSetId": "builtin:d20",
+  "derivedFrom": {
+    "templateId": "builtin:5e-2024-monster",
+    "revision": 5
+  },
+  "source": {
+    "system": "5E (2024 rules)",
+    "label": "SRD 5.2.1 · CC BY 4.0",
+    "licences": [
+      "CC-BY-4.0"
+    ],
+    "attribution": "This work includes material from the System Reference Document 5.2.1 (\"SRD 5.2.1\") by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "licenceUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "sourceUrl": "https://www.dndbeyond.com/srd",
+    "modification": "Atlas VTT arranged the stat block structure as an editable template. Edited by the Discord of Atlas VTT."
+  },
+  "fields": [
+    {
+      "key": "name",
+      "label": "Character Name",
+      "type": "text"
+    },
+    {
+      "key": "image",
+      "label": "Portrait",
+      "type": "image"
+    },
+    {
+      "key": "species",
+      "label": "Species",
+      "type": "text",
+      "meaning": "creature-type"
+    },
+    {
+      "key": "background",
+      "label": "Background",
+      "type": "text"
+    },
+    {
+      "key": "class",
+      "label": "Class",
+      "type": "text"
+    },
+    {
+      "key": "subclass",
+      "label": "Subclass",
+      "type": "text"
+    },
+    {
+      "key": "level",
+      "label": "Level",
+      "type": "rating",
+      "meaning": "rating"
+    },
+    {
+      "key": "xp",
+      "label": "Experience Points",
+      "type": "number"
+    },
+    {
+      "key": "size",
+      "label": "Size",
+      "type": "choice",
+      "meaning": "size",
+      "options": [
+        "Tiny",
+        "Small",
+        "Medium",
+        "Large",
+        "Huge",
+        "Gargantuan"
+      ],
+      "open": true
+    },
+    {
+      "key": "alignment",
+      "label": "Alignment",
+      "type": "text"
+    },
+    {
+      "key": "heroic_inspiration",
+      "label": "Heroic Inspiration",
+      "type": "counters",
+      "counterRows": [
+        {
+          "name": "Inspiration",
+          "max": 1
+        }
+      ]
+    },
+    {
+      "key": "ac",
+      "label": "Armor Class",
+      "type": "number",
+      "meaning": "armor"
+    },
+    {
+      "key": "initiative",
+      "label": "Initiative",
+      "type": "number",
+      "meaning": "initiative"
+    },
+    {
+      "key": "speed",
+      "label": "Speed",
+      "type": "number",
+      "unit": "ft."
+    },
+    {
+      "key": "pb",
+      "label": "Proficiency Bonus",
+      "type": "number"
+    },
+    {
+      "key": "hp",
+      "label": "HP",
+      "type": "number",
+      "meaning": "hit-points"
+    },
+    {
+      "key": "hit_dice",
+      "label": "Hit Point Dice",
+      "type": "dice"
+    },
+    {
+      "key": "hit_dice_spent",
+      "label": "Hit Point Dice Spent",
+      "type": "number"
+    },
+    {
+      "key": "hit_dice_pool",
+      "label": "Hit Dice",
+      "type": "counters",
+      "counterRows": []
+    },
+    {
+      "key": "death_save_success",
+      "label": "Death Saves: Success",
+      "type": "counters",
+      "counterRows": [
+        {
+          "name": "Success",
+          "max": 3
+        }
+      ]
+    },
+    {
+      "key": "death_save_failure",
+      "label": "Death Saves: Failure",
+      "type": "counters",
+      "counterRows": [
+        {
+          "name": "Failure",
+          "max": 3
+        }
+      ]
+    },
+    {
+      "key": "stats",
+      "label": "Abilities",
+      "type": "scores",
+      "slots": [
+        "Str",
+        "Dex",
+        "Con",
+        "Int",
+        "Wis",
+        "Cha"
+      ],
+      "slotKeys": [
+        "strength",
+        "dexterity",
+        "constitution",
+        "intelligence",
+        "wisdom",
+        "charisma"
+      ],
+      "rows": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "addRows": false,
+      "addColumns": false
+    },
+    {
+      "key": "saves",
+      "label": "Saving Throws",
+      "type": "pairs"
+    },
+    {
+      "key": "bonus_dice",
+      "label": "Situational Bonuses (Bless / Guidance)",
+      "type": "pairs",
+      "valueType": "dice"
+    }, 
+{
+      "key": "acrobatics_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "acrobatics_override",
+      "label": "Acrobatics (Override)",
+      "type": "number"
+    },
+    {
+      "key": "animal_handling_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "animal_handling_override",
+      "label": "Animal Handling (Override)",
+      "type": "number"
+    },
+    {
+      "key": "arcana_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "arcana_override",
+      "label": "Arcana (Override)",
+      "type": "number"
+    },
+    {
+      "key": "athletics_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "athletics_override",
+      "label": "Athletics (Override)",
+      "type": "number"
+    },
+    {
+      "key": "deception_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "deception_override",
+      "label": "Deception (Override)",
+      "type": "number"
+    },
+    {
+      "key": "history_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "history_override",
+      "label": "History (Override)",
+      "type": "number"
+    },
+    {
+      "key": "insight_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "insight_override",
+      "label": "Insight (Override)",
+      "type": "number"
+    },
+    {
+      "key": "intimidation_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "intimidation_override",
+      "label": "Intimidation (Override)",
+      "type": "number"
+    },
+    {
+      "key": "investigation_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "investigation_override",
+      "label": "Investigation (Override)",
+      "type": "number"
+    },
+    {
+      "key": "medicine_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "medicine_override",
+      "label": "Medicine (Override)",
+      "type": "number"
+    },
+    {
+      "key": "nature_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "nature_override",
+      "label": "Nature (Override)",
+      "type": "number"
+    },
+    {
+      "key": "perception_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "perception_override",
+      "label": "Perception (Override)",
+      "type": "number"
+    },
+    {
+      "key": "performance_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "performance_override",
+      "label": "Performance (Override)",
+      "type": "number"
+    },
+    {
+      "key": "persuasion_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "persuasion_override",
+      "label": "Persuasion (Override)",
+      "type": "number"
+    },
+    {
+      "key": "religion_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "religion_override",
+      "label": "Religion (Override)",
+      "type": "number"
+    },
+    {
+      "key": "sleight_of_hand_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "sleight_of_hand_override",
+      "label": "Sleight of Hand (Override)",
+      "type": "number"
+    },
+    {
+      "key": "stealth_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "stealth_override",
+      "label": "Stealth (Override)",
+      "type": "number"
+    },
+    {
+      "key": "survival_prof",
+      "label": "O",
+      "type": "choice",
+      "options": [
+        "◇",
+        "⬖",
+        "◆",
+        "❖"
+      ]
+    },
+    {
+      "key": "survival_override",
+      "label": "Survival (Override)",
+      "type": "number"
+    },
+    {
+      "key": "passive_perception",
+      "label": "Perception",
+      "type": "number"
+    },
+    {
+      "key": "passive_investigation",
+      "label": "Investigation",
+      "type": "number"
+    },
+    {
+      "key": "passive_insight",
+      "label": "Insight",
+      "type": "number"
+    },
+    {
+      "key": "senses",
+      "label": "Senses",
+      "type": "text",
+      "meaning": "senses"
+    },
+    {
+      "key": "languages",
+      "label": "Languages",
+      "type": "text"
+    },
+    {
+      "key": "damage_vulnerabilities",
+      "label": "Vulnerabilities",
+      "type": "text"
+    },
+    {
+      "key": "damage_resistances",
+      "label": "Resistances",
+      "type": "text"
+    },
+    {
+      "key": "damage_immunities",
+      "label": "Damage Immunities",
+      "type": "text"
+    },
+    {
+      "key": "condition_immunities",
+      "label": "Condition Immunities",
+      "type": "text"
+    },
+    {
+      "key": "armor_training",
+      "label": "Armor Training",
+      "type": "text"
+    },
+    {
+      "key": "weapon_proficiencies",
+      "label": "Weapon Proficiencies",
+      "type": "text"
+    },
+    {
+      "key": "tool_proficiencies",
+      "label": "Tool Proficiencies",
+      "type": "text"
+    },
+    {
+      "key": "weapon_mastery",
+      "label": "Weapon Mastery",
+      "type": "entries"
+    },
+    {
+      "key": "class_resources",
+      "label": "Class & Feature Resources",
+      "type": "counters",
+      "counterRows": []
+    },
+    {
+      "key": "action_uses",
+      "label": "Action Uses",
+      "type": "counters",
+      "counterRows": []
+    },
+    {
+      "key": "bonus_action_uses",
+      "label": "Bonus Action Uses",
+      "type": "counters",
+      "counterRows": []
+    },
+    {
+      "key": "reaction_uses",
+      "label": "Reaction Uses",
+      "type": "counters",
+      "counterRows": []
+    },
+    {
+      "key": "class_feature_uses",
+      "label": "Class Feature Uses",
+      "type": "counters",
+      "counterRows": []
+    },
+    {
+      "key": "species_trait_uses",
+      "label": "Species Trait Uses",
+      "type": "counters",
+      "counterRows": []
+    },
+    {
+      "key": "feat_uses",
+      "label": "Feat Uses",
+      "type": "counters",
+      "counterRows": []
+    },
+    {
+      "key": "actions",
+      "label": "Attacks & Actions",
+      "type": "entries",
+      "entry": {
+        "extras": [
+          {
+            "key": "range",
+            "label": "Range",
+            "type": "text"
+          },
+          {
+            "key": "attack",
+            "label": "Attack",
+            "type": "dice"
+          },
+          {
+            "key": "damage",
+            "label": "Damage",
+            "type": "dice"
+          },
+          {
+            "key": "type",
+            "label": "Type",
+            "type": "text"
+          },
+          {
+            "key": "cost",
+            "label": "Cost",
+            "type": "text"
+          },
+          {
+            "key": "uses",
+            "label": "Uses",
+            "type": "text"
+          }
+        ]
+      }
+    },
+    {
+      "key": "bonus_actions",
+      "label": "Bonus Actions",
+      "type": "entries",
+      "entry": {
+        "extras": [
+          {
+            "key": "range",
+            "label": "Range",
+            "type": "text"
+          },
+          {
+            "key": "attack",
+            "label": "Attack",
+            "type": "dice"
+          },
+          {
+            "key": "damage",
+            "label": "Damage",
+            "type": "dice"
+          },
+          {
+            "key": "type",
+            "label": "Type",
+            "type": "text"
+          },
+          {
+            "key": "cost",
+            "label": "Cost",
+            "type": "text"
+          },
+          {
+            "key": "uses",
+            "label": "Uses",
+            "type": "text"
+          }
+        ]
+      }
+    },
+    {
+      "key": "reactions",
+      "label": "Reactions",
+      "type": "entries",
+      "entry": {
+        "extras": [
+          {
+            "key": "range",
+            "label": "Range",
+            "type": "text"
+          },
+          {
+            "key": "attack",
+            "label": "Attack",
+            "type": "dice"
+          },
+          {
+            "key": "damage",
+            "label": "Damage",
+            "type": "dice"
+          },
+          {
+            "key": "type",
+            "label": "Type",
+            "type": "text"
+          },
+          {
+            "key": "cost",
+            "label": "Cost",
+            "type": "text"
+          },
+          {
+            "key": "uses",
+            "label": "Uses",
+            "type": "text"
+          }
+        ]
+      }
+    },
+    {
+      "key": "otheractions",
+      "label": "Other",
+      "type": "entries"
+    },
+    {
+      "key": "class_features",
+      "label": "Class Features",
+      "type": "entries"
+    },
+    {
+      "key": "species_traits",
+      "label": "Species Traits",
+      "type": "entries"
+    },
+    {
+      "key": "feats",
+      "label": "Feats",
+      "type": "entries"
+    },
+    {
+      "key": "spellcasting_ability",
+      "label": "Ability",
+      "type": "choice",
+      "options": [
+        "Int",
+        "Wis",
+        "Cha"
+      ]
+    },
+    {
+      "key": "spell_save_dc",
+      "label": "Save DC",
+      "type": "number",
+      "rollable": false
+    },
+    {
+      "key": "spell_attack_bonus",
+      "label": "Atk Bonus",
+      "type": "number"
+    },
+    {
+      "key": "slots",
+      "label": "Spell Slots",
+      "type": "counters",
+      "counterRows": []
+    },
+    {
+      "key": "spells",
+      "label": "Spells",
+      "type": "spells"
+    },
+    {
+      "key": "equipment",
+      "label": "Equipment",
+      "type": "entries"
+    },
+    {
+      "key": "currency",
+      "label": "Currency",
+      "type": "scores",
+      "slots": [
+        "CP",
+        "SP",
+        "EP",
+        "GP",
+        "PP"
+      ],
+      "addRows": false,
+      "addColumns": false
+    },
+    {
+      "key": "age",
+      "label": "Age",
+      "type": "text"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "type": "text"
+    },
+    {
+      "key": "weight",
+      "label": "Weight",
+      "type": "text"
+    },
+    {
+      "key": "eyes",
+      "label": "Eyes",
+      "type": "text"
+    },
+    {
+      "key": "hair",
+      "label": "Hair",
+      "type": "text"
+    },
+    {
+      "key": "skin",
+      "label": "Skin",
+      "type": "text"
+    },
+    {
+      "key": "appearance",
+      "label": "Appearance",
+      "type": "text"
+    },
+    {
+      "key": "personality",
+      "label": "Personality",
+      "type": "text"
+    },
+    {
+      "key": "allies",
+      "label": "Allies & Organizations",
+      "type": "text"
+    },
+    {
+      "key": "notes",
+      "label": "Notes",
+      "type": "text"
+    },
+    {
+      "key": "description",
+      "label": "Backstory",
+      "type": "markdown",
+      "meaning": "description"
+    },
+    {
+      "key": "spellcasting",
+      "label": "Spellcasting",
+      "type": "entries",
+      "entry": {
+        "extras": [
+          {
+            "key": "range",
+            "label": "Range",
+            "type": "text"
+          },
+          {
+            "key": "cost",
+            "label": "Cost",
+            "type": "text"
+          },
+          {
+            "key": "damage",
+            "label": "Damage",
+            "type": "dice"
+          },
+          {
+            "key": "type",
+            "label": "Type",
+            "type": "text"
+          },
+          {
+            "key": "duration",
+            "label": "Duration",
+            "type": "text"
+          },
+          {
+            "key": "effect",
+            "label": "Effect",
+            "type": "text"
+          },
+          {
+            "key": "upcast",
+            "label": "Upcast",
+            "type": "text"
+          }
+        ]
+      }
+    },
+    {
+      "key": "tab_2",
+      "label": "Tab 2",
+      "type": "entries",
+      "entry": {
+        "extras": [
+          {
+            "key": "range",
+            "label": "Range",
+            "type": "text"
+          },
+          {
+            "key": "cost",
+            "label": "Cost",
+            "type": "text"
+          },
+          {
+            "key": "damage",
+            "label": "Damage",
+            "type": "dice"
+          },
+          {
+            "key": "type",
+            "label": "Type",
+            "type": "text"
+          },
+          {
+            "key": "duration",
+            "label": "Duration",
+            "type": "text"
+          },
+          {
+            "key": "effect",
+            "label": "Effect",
+            "type": "text"
+          },
+          {
+            "key": "upcast",
+            "label": "Upcast",
+            "type": "text"
+          }
+        ]
+      }
+    },
+    {
+      "key": "tab_3",
+      "label": "Tab 3",
+      "type": "entries",
+      "entry": {
+        "extras": [
+          {
+            "key": "range",
+            "label": "Range",
+            "type": "text"
+          },
+          {
+            "key": "cost",
+            "label": "Cost",
+            "type": "text"
+          },
+          {
+            "key": "damage",
+            "label": "Damage",
+            "type": "dice"
+          },
+          {
+            "key": "type",
+            "label": "Type",
+            "type": "text"
+          },
+          {
+            "key": "duration",
+            "label": "Duration",
+            "type": "text"
+          },
+          {
+            "key": "effect",
+            "label": "Effect",
+            "type": "text"
+          },
+          {
+            "key": "upcast",
+            "label": "Upcast",
+            "type": "text"
+          }
+        ]
+      }
+    },
+    {
+      "key": "tab_4",
+      "label": "Tab 4",
+      "type": "entries",
+      "entry": {
+        "extras": [
+          {
+            "key": "range",
+            "label": "Range",
+            "type": "text"
+          },
+          {
+            "key": "cost",
+            "label": "Cost",
+            "type": "text"
+          },
+          {
+            "key": "damage",
+            "label": "Damage",
+            "type": "dice"
+          },
+          {
+            "key": "type",
+            "label": "Type",
+            "type": "text"
+          },
+          {
+            "key": "duration",
+            "label": "Duration",
+            "type": "text"
+          },
+          {
+            "key": "effect",
+            "label": "Effect",
+            "type": "text"
+          },
+          {
+            "key": "upcast",
+            "label": "Upcast",
+            "type": "text"
+          }
+        ]
+      }
+    },
+    {
+      "key": "tab_5",
+      "label": "Tab 5",
+      "type": "entries",
+      "entry": {
+        "extras": [
+          {
+            "key": "range",
+            "label": "Range",
+            "type": "text"
+          },
+          {
+            "key": "cost",
+            "label": "Cost",
+            "type": "text"
+          },
+          {
+            "key": "damage",
+            "label": "Damage",
+            "type": "dice"
+          },
+          {
+            "key": "type",
+            "label": "Type",
+            "type": "text"
+          },
+          {
+            "key": "duration",
+            "label": "Duration",
+            "type": "text"
+          },
+          {
+            "key": "effect",
+            "label": "Effect",
+            "type": "text"
+          },
+          {
+            "key": "upcast",
+            "label": "Upcast",
+            "type": "text"
+          }
+        ]
+      }
+    },
+    {
+      "key": "tab_6",
+      "label": "Tab 6",
+      "type": "entries",
+      "entry": {
+        "extras": [
+          {
+            "key": "range",
+            "label": "Range",
+            "type": "text"
+          },
+          {
+            "key": "cost",
+            "label": "Cost",
+            "type": "text"
+          },
+          {
+            "key": "damage",
+            "label": "Damage",
+            "type": "dice"
+          },
+          {
+            "key": "type",
+            "label": "Type",
+            "type": "text"
+          },
+          {
+            "key": "duration",
+            "label": "Duration",
+            "type": "text"
+          },
+          {
+            "key": "effect",
+            "label": "Effect",
+            "type": "text"
+          },
+          {
+            "key": "upcast",
+            "label": "Upcast",
+            "type": "text"
+          }
+        ]
+      }
+    },
+    {
+      "key": "tab_7",
+      "label": "Tab 7",
+      "type": "entries",
+      "entry": {
+        "extras": [
+          {
+            "key": "range",
+            "label": "Range",
+            "type": "text"
+          },
+          {
+            "key": "cost",
+            "label": "Cost",
+            "type": "text"
+          },
+          {
+            "key": "damage",
+            "label": "Damage",
+            "type": "dice"
+          },
+          {
+            "key": "type",
+            "label": "Type",
+            "type": "text"
+          },
+          {
+            "key": "duration",
+            "label": "Duration",
+            "type": "text"
+          },
+          {
+            "key": "effect",
+            "label": "Effect",
+            "type": "text"
+          },
+          {
+            "key": "upcast",
+            "label": "Upcast",
+            "type": "text"
+          }
+        ]
+      }
+    },
+    {
+      "key": "tab_8",
+      "label": "Tab 8",
+      "type": "entries",
+      "entry": {
+        "extras": [
+          {
+            "key": "range",
+            "label": "Range",
+            "type": "text"
+          },
+          {
+            "key": "cost",
+            "label": "Cost",
+            "type": "text"
+          },
+          {
+            "key": "damage",
+            "label": "Damage",
+            "type": "dice"
+          },
+          {
+            "key": "type",
+            "label": "Type",
+            "type": "text"
+          },
+          {
+            "key": "duration",
+            "label": "Duration",
+            "type": "text"
+          },
+          {
+            "key": "effect",
+            "label": "Effect",
+            "type": "text"
+          },
+          {
+            "key": "upcast",
+            "label": "Upcast",
+            "type": "text"
+          }
+        ]
+      }
+    },
+    {
+      "key": "tab_9",
+      "label": "Tab 9",
+      "type": "entries",
+      "entry": {
+        "extras": [
+          {
+            "key": "range",
+            "label": "Range",
+            "type": "text"
+          },
+          {
+            "key": "cost",
+            "label": "Cost",
+            "type": "text"
+          },
+          {
+            "key": "damage",
+            "label": "Damage",
+            "type": "dice"
+          },
+          {
+            "key": "type",
+            "label": "Type",
+            "type": "text"
+          },
+          {
+            "key": "duration",
+            "label": "Duration",
+            "type": "text"
+          },
+          {
+            "key": "effect",
+            "label": "Effect",
+            "type": "text"
+          },
+          {
+            "key": "upcast",
+            "label": "Upcast",
+            "type": "text"
+          }
+        ]
+      }
+    },
+    {
+      "key": "tab_10",
+      "label": "Tab 10",
+      "type": "entries",
+      "entry": {
+        "extras": [
+          {
+            "key": "range",
+            "label": "Range",
+            "type": "text"
+          },
+          {
+            "key": "cost",
+            "label": "Cost",
+            "type": "text"
+          },
+          {
+            "key": "damage",
+            "label": "Damage",
+            "type": "dice"
+          },
+          {
+            "key": "type",
+            "label": "Type",
+            "type": "text"
+          },
+          {
+            "key": "duration",
+            "label": "Duration",
+            "type": "text"
+          },
+          {
+            "key": "effect",
+            "label": "Effect",
+            "type": "text"
+          },
+          {
+            "key": "upcast",
+            "label": "Upcast",
+            "type": "text"
+          }
+        ]
+      }
+    },
+    {
+      "key": "notes_2",
+      "label": "Notes",
+      "type": "markdown"
+    }
+  ],
+  "header": {
+    "hidden": [
+      "level",
+      "description"
+    ]
+  },
+  "layout": {
+    "maxColumns": 2,
+    "columnWidth": 22,
+    "blocks": [
+      {
+        "id": "c5line01",
+        "type": "line",
+        "fields": [
+          "level",
+          "species",
+          "class",
+          "subclass"
+        ],
+        "pattern": "Level {level} {species} {class}[ ({subclass})]"
+      },
+      {
+        "id": "c5line02",
+        "type": "line",
+        "fields": [
+          "size",
+          "background",
+          "alignment"
+        ],
+        "pattern": "{size}[ · {background}][ · {alignment}]"
+      },
+      {
+        "id": "c5row008",
+        "type": "row",
+        "align": "start",
+        "blocks": [
+          {
+            "id": "c5class0",
+            "type": "stat",
+            "field": "class",
+            "look": "run-in"
+          },
+          {
+            "id": "c5subcl0",
+            "type": "stat",
+            "field": "subclass",
+            "look": "run-in"
+          }
+        ]
+      },
+      {
+        "id": "c5divid1",
+        "type": "divider"
+      },
+      {
+        "id": "c5met001",
+        "type": "metric",
+        "heading": "Combat & Defense",
+        "fields": [
+          "ac",
+          "initiative",
+          "speed"
+        ],
+        "rollable": true
+      },
+      {
+        "id": "c5pb0000",
+        "type": "stat",
+        "field": "pb",
+        "label": "Proficiency Bonus",
+        "look": "run-in",
+        "rollable": true,
+        "addsToRolls": true
+      },
+      {
+        "id": "c5hd0000",
+        "type": "stat",
+        "field": "hit_dice",
+        "label": "Hit Point Dice",
+        "look": "run-in",
+        "pattern": "{hit_dice}[ ({hit_dice_spent} spent)]"
+      },
+      {
+        "id": "c5hdp000",
+        "type": "counters",
+        "field": "hit_dice_pool",
+        "label": "Hit Dice Pool"
+      },
+      {
+        "id": "c5insp00",
+        "type": "counters",
+        "field": "heroic_inspiration",
+        "label": "Heroic Inspiration"
+      },
+      {
+        "id": "03tm2jcu",
+        "type": "row",
+        "align": "spread",
+        "blocks": [
+          {
+            "id": "c5ds0001",
+            "type": "counters",
+            "field": "death_save_success",
+            "label": "Death Save (Success)"
+          },
+          {
+            "id": "c5ds0002",
+            "type": "counters",
+            "field": "death_save_failure",
+            "label": "Death Save (Failure)"
+          }
+        ]
+      },
+      {
+        "id": "c5xp0000",
+        "type": "stat",
+        "field": "xp",
+        "label": "XP",
+        "look": "run-in",
+        "pattern": "{xp}[ / {level|lookup:xp_next}]"
+      },
+      {
+        "id": "uwtha4rd",
+        "type": "divider"
+      },
+      {
+        "id": "c5stats0",
+        "type": "scores",
+        "field": "stats",
+        "orientation": "table",
+        "perLine": 3,
+        "columns": [
+          {
+            "label": "Mod",
+            "formula": "floor((value - 10) / 2)",
+            "display": "signed"
+          },
+          {
+            "label": "Save",
+            "field": "saves",
+            "formula": "floor((value - 10) / 2)",
+            "display": "signed"
+          }
+        ],
+        "rollable": true
+      },
+{
+        "id": "c5sit001",
+        "type": "pairs",
+        "field": "bonus_dice",
+        "label": "Bonus Dice (Bless / Guidance)",
+        "addsToRolls": true
+      },
+      {
+        "id": "c5skgrp0",
+        "type": "section",
+        "heading": "Skills",
+        "label": "Skills",
+        "blocks": [
+           {
+            "id": "c5sk00r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk00p0",
+                "type": "stat",
+                "field": "acrobatics_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{acrobatics_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk00v0",
+                "type": "stat",
+                "field": "acrobatics_override",
+                "label": "Acrobatics (Dex)",
+                "look": "run-in",
+                "pattern": "{acrobatics_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "acrobatics_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.1 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e0000000",
+                "type": "stat",
+                "field": "acrobatics_override",
+                "label": "Acrobatics (Dex)",
+                "look": "run-in",
+                "pattern": "{acrobatics_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "acrobatics_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.1 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h0000000",
+                "type": "stat",
+                "field": "acrobatics_override",
+                "label": "Acrobatics (Dex)",
+                "look": "run-in",
+                "pattern": "{acrobatics_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "acrobatics_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.1 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s0000000",
+                "type": "stat",
+                "field": "acrobatics_override",
+                "label": "Acrobatics (Dex)",
+                "look": "run-in",
+                "pattern": "{acrobatics_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "acrobatics_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.1 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s0000001",
+                "type": "stat",
+                "field": "acrobatics_override",
+                "label": "Acrobatics (Dex)",
+                "look": "run-in",
+                "pattern": "{acrobatics_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "acrobatics_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.1 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk01r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk01p0",
+                "type": "stat",
+                "field": "animal_handling_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{animal_handling_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk01v0",
+                "type": "stat",
+                "field": "animal_handling_override",
+                "label": "Animal Handling (Wis)",
+                "look": "run-in",
+                "pattern": "{animal_handling_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "animal_handling_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e0000001",
+                "type": "stat",
+                "field": "animal_handling_override",
+                "label": "Animal Handling (Wis)",
+                "look": "run-in",
+                "pattern": "{animal_handling_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "animal_handling_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h0000001",
+                "type": "stat",
+                "field": "animal_handling_override",
+                "label": "Animal Handling (Wis)",
+                "look": "run-in",
+                "pattern": "{animal_handling_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "animal_handling_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s0000002",
+                "type": "stat",
+                "field": "animal_handling_override",
+                "label": "Animal Handling (Wis)",
+                "look": "run-in",
+                "pattern": "{animal_handling_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "animal_handling_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s0000003",
+                "type": "stat",
+                "field": "animal_handling_override",
+                "label": "Animal Handling (Wis)",
+                "look": "run-in",
+                "pattern": "{animal_handling_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "animal_handling_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk02r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk02p0",
+                "type": "stat",
+                "field": "arcana_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{arcana_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk02v0",
+                "type": "stat",
+                "field": "arcana_override",
+                "label": "Arcana (Int)",
+                "look": "run-in",
+                "pattern": "{arcana_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "arcana_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e0000002",
+                "type": "stat",
+                "field": "arcana_override",
+                "label": "Arcana (Int)",
+                "look": "run-in",
+                "pattern": "{arcana_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "arcana_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h0000002",
+                "type": "stat",
+                "field": "arcana_override",
+                "label": "Arcana (Int)",
+                "look": "run-in",
+                "pattern": "{arcana_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "arcana_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s0000004",
+                "type": "stat",
+                "field": "arcana_override",
+                "label": "Arcana (Int)",
+                "look": "run-in",
+                "pattern": "{arcana_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "arcana_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s0000005",
+                "type": "stat",
+                "field": "arcana_override",
+                "label": "Arcana (Int)",
+                "look": "run-in",
+                "pattern": "{arcana_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "arcana_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk03r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk03p0",
+                "type": "stat",
+                "field": "athletics_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{athletics_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk03v0",
+                "type": "stat",
+                "field": "athletics_override",
+                "label": "Athletics (Str)",
+                "look": "run-in",
+                "pattern": "{athletics_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "athletics_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.0 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e0000003",
+                "type": "stat",
+                "field": "athletics_override",
+                "label": "Athletics (Str)",
+                "look": "run-in",
+                "pattern": "{athletics_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "athletics_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.0 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h0000003",
+                "type": "stat",
+                "field": "athletics_override",
+                "label": "Athletics (Str)",
+                "look": "run-in",
+                "pattern": "{athletics_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "athletics_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.0 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s0000006",
+                "type": "stat",
+                "field": "athletics_override",
+                "label": "Athletics (Str)",
+                "look": "run-in",
+                "pattern": "{athletics_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "athletics_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.0 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s0000007",
+                "type": "stat",
+                "field": "athletics_override",
+                "label": "Athletics (Str)",
+                "look": "run-in",
+                "pattern": "{athletics_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "athletics_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.0 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk04r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk04p0",
+                "type": "stat",
+                "field": "deception_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{deception_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk04v0",
+                "type": "stat",
+                "field": "deception_override",
+                "label": "Deception (Cha)",
+                "look": "run-in",
+                "pattern": "{deception_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "deception_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e0000004",
+                "type": "stat",
+                "field": "deception_override",
+                "label": "Deception (Cha)",
+                "look": "run-in",
+                "pattern": "{deception_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "deception_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h0000004",
+                "type": "stat",
+                "field": "deception_override",
+                "label": "Deception (Cha)",
+                "look": "run-in",
+                "pattern": "{deception_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "deception_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s0000008",
+                "type": "stat",
+                "field": "deception_override",
+                "label": "Deception (Cha)",
+                "look": "run-in",
+                "pattern": "{deception_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "deception_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s0000009",
+                "type": "stat",
+                "field": "deception_override",
+                "label": "Deception (Cha)",
+                "look": "run-in",
+                "pattern": "{deception_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "deception_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk05r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk05p0",
+                "type": "stat",
+                "field": "history_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{history_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk05v0",
+                "type": "stat",
+                "field": "history_override",
+                "label": "History (Int)",
+                "look": "run-in",
+                "pattern": "{history_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "history_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e0000005",
+                "type": "stat",
+                "field": "history_override",
+                "label": "History (Int)",
+                "look": "run-in",
+                "pattern": "{history_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "history_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h0000005",
+                "type": "stat",
+                "field": "history_override",
+                "label": "History (Int)",
+                "look": "run-in",
+                "pattern": "{history_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "history_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s000000a",
+                "type": "stat",
+                "field": "history_override",
+                "label": "History (Int)",
+                "look": "run-in",
+                "pattern": "{history_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "history_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s000000b",
+                "type": "stat",
+                "field": "history_override",
+                "label": "History (Int)",
+                "look": "run-in",
+                "pattern": "{history_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "history_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk06r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk06p0",
+                "type": "stat",
+                "field": "insight_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{insight_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk06v0",
+                "type": "stat",
+                "field": "insight_override",
+                "label": "Insight (Wis)",
+                "look": "run-in",
+                "pattern": "{insight_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "insight_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e0000006",
+                "type": "stat",
+                "field": "insight_override",
+                "label": "Insight (Wis)",
+                "look": "run-in",
+                "pattern": "{insight_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "insight_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h0000006",
+                "type": "stat",
+                "field": "insight_override",
+                "label": "Insight (Wis)",
+                "look": "run-in",
+                "pattern": "{insight_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "insight_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s000000c",
+                "type": "stat",
+                "field": "insight_override",
+                "label": "Insight (Wis)",
+                "look": "run-in",
+                "pattern": "{insight_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "insight_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s000000d",
+                "type": "stat",
+                "field": "insight_override",
+                "label": "Insight (Wis)",
+                "look": "run-in",
+                "pattern": "{insight_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "insight_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk07r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk07p0",
+                "type": "stat",
+                "field": "intimidation_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{intimidation_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk07v0",
+                "type": "stat",
+                "field": "intimidation_override",
+                "label": "Intimidation (Cha)",
+                "look": "run-in",
+                "pattern": "{intimidation_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "intimidation_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e0000007",
+                "type": "stat",
+                "field": "intimidation_override",
+                "label": "Intimidation (Cha)",
+                "look": "run-in",
+                "pattern": "{intimidation_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "intimidation_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h0000007",
+                "type": "stat",
+                "field": "intimidation_override",
+                "label": "Intimidation (Cha)",
+                "look": "run-in",
+                "pattern": "{intimidation_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "intimidation_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s000000e",
+                "type": "stat",
+                "field": "intimidation_override",
+                "label": "Intimidation (Cha)",
+                "look": "run-in",
+                "pattern": "{intimidation_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "intimidation_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s000000f",
+                "type": "stat",
+                "field": "intimidation_override",
+                "label": "Intimidation (Cha)",
+                "look": "run-in",
+                "pattern": "{intimidation_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "intimidation_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk08r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk08p0",
+                "type": "stat",
+                "field": "investigation_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{investigation_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk08v0",
+                "type": "stat",
+                "field": "investigation_override",
+                "label": "Investigation (Int)",
+                "look": "run-in",
+                "pattern": "{investigation_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "investigation_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e0000008",
+                "type": "stat",
+                "field": "investigation_override",
+                "label": "Investigation (Int)",
+                "look": "run-in",
+                "pattern": "{investigation_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "investigation_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h0000008",
+                "type": "stat",
+                "field": "investigation_override",
+                "label": "Investigation (Int)",
+                "look": "run-in",
+                "pattern": "{investigation_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "investigation_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s000000g",
+                "type": "stat",
+                "field": "investigation_override",
+                "label": "Investigation (Int)",
+                "look": "run-in",
+                "pattern": "{investigation_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "investigation_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s000000h",
+                "type": "stat",
+                "field": "investigation_override",
+                "label": "Investigation (Int)",
+                "look": "run-in",
+                "pattern": "{investigation_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "investigation_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk09r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk09p0",
+                "type": "stat",
+                "field": "medicine_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{medicine_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk09v0",
+                "type": "stat",
+                "field": "medicine_override",
+                "label": "Medicine (Wis)",
+                "look": "run-in",
+                "pattern": "{medicine_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "medicine_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e0000009",
+                "type": "stat",
+                "field": "medicine_override",
+                "label": "Medicine (Wis)",
+                "look": "run-in",
+                "pattern": "{medicine_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "medicine_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h0000009",
+                "type": "stat",
+                "field": "medicine_override",
+                "label": "Medicine (Wis)",
+                "look": "run-in",
+                "pattern": "{medicine_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "medicine_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s000000i",
+                "type": "stat",
+                "field": "medicine_override",
+                "label": "Medicine (Wis)",
+                "look": "run-in",
+                "pattern": "{medicine_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "medicine_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s000000j",
+                "type": "stat",
+                "field": "medicine_override",
+                "label": "Medicine (Wis)",
+                "look": "run-in",
+                "pattern": "{medicine_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "medicine_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk10r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk10p0",
+                "type": "stat",
+                "field": "nature_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{nature_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk10v0",
+                "type": "stat",
+                "field": "nature_override",
+                "label": "Nature (Int)",
+                "look": "run-in",
+                "pattern": "{nature_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "nature_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e000000a",
+                "type": "stat",
+                "field": "nature_override",
+                "label": "Nature (Int)",
+                "look": "run-in",
+                "pattern": "{nature_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "nature_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h000000a",
+                "type": "stat",
+                "field": "nature_override",
+                "label": "Nature (Int)",
+                "look": "run-in",
+                "pattern": "{nature_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "nature_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s000000k",
+                "type": "stat",
+                "field": "nature_override",
+                "label": "Nature (Int)",
+                "look": "run-in",
+                "pattern": "{nature_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "nature_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s000000l",
+                "type": "stat",
+                "field": "nature_override",
+                "label": "Nature (Int)",
+                "look": "run-in",
+                "pattern": "{nature_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "nature_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk11r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk11p0",
+                "type": "stat",
+                "field": "perception_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{perception_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk11v0",
+                "type": "stat",
+                "field": "perception_override",
+                "label": "Perception (Wis)",
+                "look": "run-in",
+                "pattern": "{perception_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "perception_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e000000b",
+                "type": "stat",
+                "field": "perception_override",
+                "label": "Perception (Wis)",
+                "look": "run-in",
+                "pattern": "{perception_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "perception_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h000000b",
+                "type": "stat",
+                "field": "perception_override",
+                "label": "Perception (Wis)",
+                "look": "run-in",
+                "pattern": "{perception_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "perception_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s000000m",
+                "type": "stat",
+                "field": "perception_override",
+                "label": "Perception (Wis)",
+                "look": "run-in",
+                "pattern": "{perception_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "perception_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s000000n",
+                "type": "stat",
+                "field": "perception_override",
+                "label": "Perception (Wis)",
+                "look": "run-in",
+                "pattern": "{perception_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "perception_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk12r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk12p0",
+                "type": "stat",
+                "field": "performance_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{performance_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk12v0",
+                "type": "stat",
+                "field": "performance_override",
+                "label": "Performance (Cha)",
+                "look": "run-in",
+                "pattern": "{performance_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "performance_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e000000c",
+                "type": "stat",
+                "field": "performance_override",
+                "label": "Performance (Cha)",
+                "look": "run-in",
+                "pattern": "{performance_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "performance_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h000000c",
+                "type": "stat",
+                "field": "performance_override",
+                "label": "Performance (Cha)",
+                "look": "run-in",
+                "pattern": "{performance_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "performance_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s000000o",
+                "type": "stat",
+                "field": "performance_override",
+                "label": "Performance (Cha)",
+                "look": "run-in",
+                "pattern": "{performance_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "performance_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s000000p",
+                "type": "stat",
+                "field": "performance_override",
+                "label": "Performance (Cha)",
+                "look": "run-in",
+                "pattern": "{performance_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "performance_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk13r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk13p0",
+                "type": "stat",
+                "field": "persuasion_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{persuasion_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk13v0",
+                "type": "stat",
+                "field": "persuasion_override",
+                "label": "Persuasion (Cha)",
+                "look": "run-in",
+                "pattern": "{persuasion_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "persuasion_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e000000d",
+                "type": "stat",
+                "field": "persuasion_override",
+                "label": "Persuasion (Cha)",
+                "look": "run-in",
+                "pattern": "{persuasion_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "persuasion_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h000000d",
+                "type": "stat",
+                "field": "persuasion_override",
+                "label": "Persuasion (Cha)",
+                "look": "run-in",
+                "pattern": "{persuasion_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "persuasion_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s000000q",
+                "type": "stat",
+                "field": "persuasion_override",
+                "label": "Persuasion (Cha)",
+                "look": "run-in",
+                "pattern": "{persuasion_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "persuasion_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s000000r",
+                "type": "stat",
+                "field": "persuasion_override",
+                "label": "Persuasion (Cha)",
+                "look": "run-in",
+                "pattern": "{persuasion_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "persuasion_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.5 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk14r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk14p0",
+                "type": "stat",
+                "field": "religion_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{religion_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk14v0",
+                "type": "stat",
+                "field": "religion_override",
+                "label": "Religion (Int)",
+                "look": "run-in",
+                "pattern": "{religion_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "religion_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e000000e",
+                "type": "stat",
+                "field": "religion_override",
+                "label": "Religion (Int)",
+                "look": "run-in",
+                "pattern": "{religion_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "religion_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h000000e",
+                "type": "stat",
+                "field": "religion_override",
+                "label": "Religion (Int)",
+                "look": "run-in",
+                "pattern": "{religion_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "religion_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s000000s",
+                "type": "stat",
+                "field": "religion_override",
+                "label": "Religion (Int)",
+                "look": "run-in",
+                "pattern": "{religion_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "religion_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s000000t",
+                "type": "stat",
+                "field": "religion_override",
+                "label": "Religion (Int)",
+                "look": "run-in",
+                "pattern": "{religion_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "religion_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.3 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk15r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk15p0",
+                "type": "stat",
+                "field": "sleight_of_hand_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{sleight_of_hand_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk15v0",
+                "type": "stat",
+                "field": "sleight_of_hand_override",
+                "label": "Sleight of Hand (Dex)",
+                "look": "run-in",
+                "pattern": "{sleight_of_hand_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "sleight_of_hand_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.1 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e000000f",
+                "type": "stat",
+                "field": "sleight_of_hand_override",
+                "label": "Sleight of Hand (Dex)",
+                "look": "run-in",
+                "pattern": "{sleight_of_hand_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "sleight_of_hand_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.1 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h000000f",
+                "type": "stat",
+                "field": "sleight_of_hand_override",
+                "label": "Sleight of Hand (Dex)",
+                "look": "run-in",
+                "pattern": "{sleight_of_hand_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "sleight_of_hand_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.1 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s000000u",
+                "type": "stat",
+                "field": "sleight_of_hand_override",
+                "label": "Sleight of Hand (Dex)",
+                "look": "run-in",
+                "pattern": "{sleight_of_hand_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "sleight_of_hand_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.1 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s000000v",
+                "type": "stat",
+                "field": "sleight_of_hand_override",
+                "label": "Sleight of Hand (Dex)",
+                "look": "run-in",
+                "pattern": "{sleight_of_hand_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "sleight_of_hand_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.1 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk16r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk16p0",
+                "type": "stat",
+                "field": "stealth_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{stealth_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk16v0",
+                "type": "stat",
+                "field": "stealth_override",
+                "label": "Stealth (Dex)",
+                "look": "run-in",
+                "pattern": "{stealth_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "stealth_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.1 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e000000g",
+                "type": "stat",
+                "field": "stealth_override",
+                "label": "Stealth (Dex)",
+                "look": "run-in",
+                "pattern": "{stealth_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "stealth_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.1 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h000000g",
+                "type": "stat",
+                "field": "stealth_override",
+                "label": "Stealth (Dex)",
+                "look": "run-in",
+                "pattern": "{stealth_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "stealth_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.1 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s000000w",
+                "type": "stat",
+                "field": "stealth_override",
+                "label": "Stealth (Dex)",
+                "look": "run-in",
+                "pattern": "{stealth_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "stealth_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.1 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s000000x",
+                "type": "stat",
+                "field": "stealth_override",
+                "label": "Stealth (Dex)",
+                "look": "run-in",
+                "pattern": "{stealth_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "stealth_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.1 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          },
+          {
+            "id": "c5sk17r0",
+            "type": "row",
+            "align": "start",
+            "blocks": [
+              {
+                "id": "c5sk17p0",
+                "type": "stat",
+                "field": "survival_prof",
+                "label": "",
+                "look": "run-in",
+                "pattern": "{survival_prof}",
+                "whenEmpty": "fallback",
+                "fallback": "◇"
+              },
+              {
+                "id": "c5sk17v0",
+                "type": "stat",
+                "field": "survival_override",
+                "label": "Survival (Wis)",
+                "look": "run-in",
+                "pattern": "{survival_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "survival_prof",
+                  "is": "equal",
+                  "value": "◇"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2)|signed}"
+              },
+              {
+                "id": "e000000h",
+                "type": "stat",
+                "field": "survival_override",
+                "label": "Survival (Wis)",
+                "look": "run-in",
+                "pattern": "{survival_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "survival_prof",
+                  "is": "absent"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2)|signed}"
+              },
+              {
+                "id": "h000000h",
+                "type": "stat",
+                "field": "survival_override",
+                "label": "Survival (Wis)",
+                "look": "run-in",
+                "pattern": "{survival_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "survival_prof",
+                  "is": "equal",
+                  "value": "⬖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2) + floor((floor((level - 1) / 4) + 2) / 2)|signed}"
+              },
+              {
+                "id": "s000000y",
+                "type": "stat",
+                "field": "survival_override",
+                "label": "Survival (Wis)",
+                "look": "run-in",
+                "pattern": "{survival_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "survival_prof",
+                  "is": "equal",
+                  "value": "◆"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2) + (floor((level - 1) / 4) + 2)|signed}"
+              },
+              {
+                "id": "s000000z",
+                "type": "stat",
+                "field": "survival_override",
+                "label": "Survival (Wis)",
+                "look": "run-in",
+                "pattern": "{survival_override|signed}",
+                "rollable": true,
+                "showWhen": {
+                  "field": "survival_prof",
+                  "is": "equal",
+                  "value": "❖"
+                },
+                "whenEmpty": "fallback",
+                "fallback": "{=floor((stats.4 - 10) / 2) + 2 * (floor((level - 1) / 4) + 2)|signed}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "9y6oth45",
+        "type": "divider"
+      },
+      {
+        "id": "c5met002",
+        "type": "metric",
+        "heading": "Passive Senses",
+        "fields": [
+          "passive_perception",
+          "passive_investigation",
+          "passive_insight"
+        ]
+      },
+      {
+        "id": "c5sense0",
+        "type": "stat",
+        "field": "senses",
+        "look": "run-in"
+      },
+      {
+        "id": "c5lang00",
+        "type": "stat",
+        "field": "languages",
+        "look": "run-in",
+        "whenEmpty": "fallback",
+        "fallback": "Common"
+      },
+      {
+        "id": "c5vuln00",
+        "type": "stat",
+        "field": "damage_vulnerabilities",
+        "label": "Vulnerabilities",
+        "look": "run-in",
+        "whenEmpty": "hide"
+      },
+      {
+        "id": "c5resi00",
+        "type": "stat",
+        "field": "damage_resistances",
+        "label": "Resistances",
+        "look": "run-in",
+        "whenEmpty": "hide"
+      },
+      {
+        "id": "c5immu00",
+        "type": "stat",
+        "field": "damage_immunities",
+        "label": "Immunities",
+        "look": "run-in",
+        "pattern": "{damage_immunities, condition_immunities|join:; }",
+        "whenEmpty": "hide"
+      },
+      {
+        "id": "c5armor0",
+        "type": "stat",
+        "field": "armor_training",
+        "look": "run-in"
+      },
+      {
+        "id": "c5wprof0",
+        "type": "stat",
+        "field": "weapon_proficiencies",
+        "look": "run-in"
+      },
+      {
+        "id": "c5tprof0",
+        "type": "stat",
+        "field": "tool_proficiencies",
+        "look": "run-in"
+      },
+      {
+        "id": "c5wmast0",
+        "type": "entries",
+        "field": "weapon_mastery",
+        "heading": "Weapon Mastery",
+        "addLabel": "Add weapon"
+      },
+      {
+        "id": "8x6b5kev",
+        "type": "tabs",
+        "heading": "Actions",
+        "blocks": [
+          {
+            "id": "64pxvbqo",
+            "type": "section",
+            "heading": "Actions",
+            "blocks": [
+              {
+                "id": "xb5gzm1o",
+                "type": "entries",
+                "field": "actions"
+              },
+              {
+                "id": "c5acuse1",
+                "type": "counters",
+                "field": "action_uses",
+                "label": "Action Uses",
+                "whenEmpty": "hide"
+              }
+            ]
+          },
+          {
+            "id": "1v8b57jv",
+            "type": "section",
+            "heading": "Bonus Actions",
+            "blocks": [
+              {
+                "id": "39i7r1vx",
+                "type": "entries",
+                "field": "bonus_actions"
+              },
+              {
+                "id": "c5bause1",
+                "type": "counters",
+                "field": "bonus_action_uses",
+                "label": "Bonus Action Uses",
+                "whenEmpty": "hide"
+              }
+            ]
+          },
+          {
+            "id": "bla4m233",
+            "type": "section",
+            "heading": "Reactions",
+            "blocks": [
+              {
+                "id": "oxlg3f9r",
+                "type": "entries",
+                "field": "reactions"
+              },
+              {
+                "id": "c5reuse1",
+                "type": "counters",
+                "field": "reaction_uses",
+                "label": "Reaction Uses",
+                "whenEmpty": "hide"
+              }
+            ]
+          },
+          {
+            "id": "c5otha00",
+            "type": "section",
+            "heading": "Other",
+            "blocks": [
+              {
+                "id": "c5otha01",
+                "type": "entries",
+                "field": "otheractions"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "c5scdiv0",
+        "type": "divider"
+      },
+      {
+        "id": "c5scgrp0",
+        "type": "section",
+        "showWhen": {
+          "field": "spellcasting_ability",
+          "is": "present"
+        },
+        "blocks": [
+          {
+            "id": "c5scst00",
+            "type": "section",
+            "heading": "Spellcasting",
+            "blocks": [
+              {
+                "id": "c5sprw00",
+                "type": "row",
+                "align": "spread",
+                "blocks": [
+                  {
+                    "id": "c5scab00",
+                    "type": "stat",
+                    "field": "spellcasting_ability",
+                    "label": "Ability",
+                    "look": "stacked"
+                  },
+                  {
+                    "id": "8rf08qux",
+                    "type": "stat",
+                    "field": "spell_save_dc",
+                    "label": "Save DC",
+                    "look": "stacked",
+                    "showWhen": {
+                      "field": "spellcasting_ability",
+                      "is": "equal",
+                      "value": "Int"
+                    },
+                    "whenEmpty": "fallback",
+                    "fallback": "{=8 + floor((stats.3 - 10) / 2) + max(2, floor((level - 1) / 4) + 2)}"
+                  },
+                  {
+                    "id": "8hxpuh5m",
+                    "type": "stat",
+                    "field": "spell_save_dc",
+                    "label": "Save DC",
+                    "look": "stacked",
+                    "showWhen": {
+                      "field": "spellcasting_ability",
+                      "is": "equal",
+                      "value": "Wis"
+                    },
+                    "whenEmpty": "fallback",
+                    "fallback": "{=8 + floor((stats.4 - 10) / 2) + max(2, floor((level - 1) / 4) + 2)}"
+                  },
+                  {
+                    "id": "kmpzlnnc",
+                    "type": "stat",
+                    "field": "spell_save_dc",
+                    "label": "Save DC",
+                    "look": "stacked",
+                    "showWhen": {
+                      "field": "spellcasting_ability",
+                      "is": "equal",
+                      "value": "Cha"
+                    },
+                    "whenEmpty": "fallback",
+                    "fallback": "{=8 + floor((stats.5 - 10) / 2) + max(2, floor((level - 1) / 4) + 2)}"
+                  },
+                  {
+                    "id": "n3rc6g23",
+                    "type": "stat",
+                    "field": "spell_attack_bonus",
+                    "label": "Atk Bonus",
+                    "look": "stacked",
+                    "display": "signed",
+                    "rollable": true,
+                    "showWhen": {
+                      "field": "spellcasting_ability",
+                      "is": "equal",
+                      "value": "Int"
+                    },
+                    "whenEmpty": "fallback",
+                    "fallback": "{=floor((stats.3 - 10) / 2) + max(2, floor((level - 1) / 4) + 2)|signed}"
+                  },
+                  {
+                    "id": "6lzsjvgp",
+                    "type": "stat",
+                    "field": "spell_attack_bonus",
+                    "label": "Atk Bonus",
+                    "look": "stacked",
+                    "display": "signed",
+                    "rollable": true,
+                    "showWhen": {
+                      "field": "spellcasting_ability",
+                      "is": "equal",
+                      "value": "Wis"
+                    },
+                    "whenEmpty": "fallback",
+                    "fallback": "{=floor((stats.4 - 10) / 2) + max(2, floor((level - 1) / 4) + 2)|signed}"
+                  },
+                  {
+                    "id": "jkx7bteo",
+                    "type": "stat",
+                    "field": "spell_attack_bonus",
+                    "label": "Atk Bonus",
+                    "look": "stacked",
+                    "display": "signed",
+                    "rollable": true,
+                    "showWhen": {
+                      "field": "spellcasting_ability",
+                      "is": "equal",
+                      "value": "Cha"
+                    },
+                    "whenEmpty": "fallback",
+                    "fallback": "{=floor((stats.5 - 10) / 2) + max(2, floor((level - 1) / 4) + 2)|signed}"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "c5slots0",
+            "type": "counters",
+            "field": "slots",
+            "label": "Spell Slots",
+            "whenEmpty": "hide"
+          },
+          {
+            "id": "j7pweyvi",
+            "type": "tabs",
+            "blocks": [
+              {
+                "id": "0u0564c6",
+                "type": "section",
+                "heading": "Cantrips",
+                "blocks": [
+                  {
+                    "id": "wavovf8j",
+                    "type": "entries",
+                    "field": "spellcasting"
+                  }
+                ]
+              },
+              {
+                "id": "9dckl80y",
+                "type": "section",
+                "heading": "1",
+                "blocks": [
+                  {
+                    "id": "7e8pr9ak",
+                    "type": "entries",
+                    "field": "tab_2"
+                  }
+                ]
+              },
+              {
+                "id": "zcqijevp",
+                "type": "section",
+                "heading": "2",
+                "blocks": [
+                  {
+                    "id": "is8z6ogk",
+                    "type": "entries",
+                    "field": "tab_3"
+                  }
+                ]
+              },
+              {
+                "id": "owx4o93u",
+                "type": "section",
+                "heading": "3",
+                "blocks": [
+                  {
+                    "id": "elsgia2a",
+                    "type": "entries",
+                    "field": "tab_4"
+                  }
+                ]
+              },
+              {
+                "id": "2mrcypnn",
+                "type": "section",
+                "heading": "4",
+                "blocks": [
+                  {
+                    "id": "92zo9c8a",
+                    "type": "entries",
+                    "field": "tab_5"
+                  }
+                ]
+              },
+              {
+                "id": "djpvfgdp",
+                "type": "section",
+                "heading": "5",
+                "blocks": [
+                  {
+                    "id": "4dx7amzh",
+                    "type": "entries",
+                    "field": "tab_6"
+                  }
+                ]
+              },
+              {
+                "id": "v9rxqdhk",
+                "type": "section",
+                "heading": "6",
+                "blocks": [
+                  {
+                    "id": "gv250bke",
+                    "type": "entries",
+                    "field": "tab_7"
+                  }
+                ]
+              },
+              {
+                "id": "1saoltpc",
+                "type": "section",
+                "heading": "7",
+                "blocks": [
+                  {
+                    "id": "wcwti5i6",
+                    "type": "entries",
+                    "field": "tab_8"
+                  }
+                ]
+              },
+              {
+                "id": "9keiwz0b",
+                "type": "section",
+                "heading": "8",
+                "blocks": [
+                  {
+                    "id": "75q3harf",
+                    "type": "entries",
+                    "field": "tab_9"
+                  }
+                ]
+              },
+              {
+                "id": "rnbenujx",
+                "type": "section",
+                "heading": "9",
+                "blocks": [
+                  {
+                    "id": "ljcu0igf",
+                    "type": "entries",
+                    "field": "tab_10"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "c5cres01",
+        "type": "counters",
+        "field": "class_resources",
+        "label": "Class & Feature Resources"
+      },
+      {
+        "id": "p24trt00",
+        "type": "tabs",
+        "heading": "Features & Traits",
+        "blocks": [
+          {
+            "id": "c5cfsec0",
+            "type": "section",
+            "heading": "Class Features",
+            "blocks": [
+              {
+                "id": "c5cfeat0",
+                "type": "entries",
+                "field": "class_features",
+                "addLabel": "Add class feature"
+              },
+              {
+                "id": "c5cfuse1",
+                "type": "counters",
+                "field": "class_feature_uses",
+                "label": "Class Feature Uses",
+                "whenEmpty": "hide"
+              }
+            ]
+          },
+          {
+            "id": "c5stsec0",
+            "type": "section",
+            "heading": "Species Traits",
+            "blocks": [
+              {
+                "id": "c5sptra0",
+                "type": "entries",
+                "field": "species_traits",
+                "addLabel": "Add species trait"
+              },
+              {
+                "id": "c5stuse1",
+                "type": "counters",
+                "field": "species_trait_uses",
+                "label": "Species Trait Uses",
+                "whenEmpty": "hide"
+              }
+            ]
+          },
+          {
+            "id": "c5fasec0",
+            "type": "section",
+            "heading": "Feats",
+            "blocks": [
+              {
+                "id": "c5feats0",
+                "type": "entries",
+                "field": "feats",
+                "addLabel": "Add feat"
+              },
+              {
+                "id": "c5ftuse1",
+                "type": "counters",
+                "field": "feat_uses",
+                "label": "Feat Uses",
+                "whenEmpty": "hide"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "c5equip0",
+        "type": "entries",
+        "field": "equipment",
+        "heading": "Equipment",
+        "addLabel": "Add item"
+      },
+      {
+        "id": "0ghhsttd",
+        "type": "scores",
+        "field": "currency",
+        "orientation": "row"
+      },
+      {
+        "id": "c5row006",
+        "type": "row",
+        "align": "start",
+        "blocks": [
+          {
+            "id": "c5age000",
+            "type": "stat",
+            "field": "age",
+            "look": "run-in"
+          },
+          {
+            "id": "c5heigh0",
+            "type": "stat",
+            "field": "height",
+            "look": "run-in"
+          },
+          {
+            "id": "c5weigh0",
+            "type": "stat",
+            "field": "weight",
+            "look": "run-in"
+          }
+        ]
+      },
+      {
+        "id": "c5row007",
+        "type": "row",
+        "align": "start",
+        "blocks": [
+          {
+            "id": "c5eyes00",
+            "type": "stat",
+            "field": "eyes",
+            "look": "run-in"
+          },
+          {
+            "id": "c5hair00",
+            "type": "stat",
+            "field": "hair",
+            "look": "run-in"
+          },
+          {
+            "id": "c5skin00",
+            "type": "stat",
+            "field": "skin",
+            "look": "run-in"
+          }
+        ]
+      },
+      {
+        "id": "c5appea0",
+        "type": "stat",
+        "field": "appearance",
+        "look": "run-in"
+      },
+      {
+        "id": "c5perso0",
+        "type": "stat",
+        "field": "personality",
+        "look": "run-in"
+      },
+      {
+        "id": "c5allie0",
+        "type": "stat",
+        "field": "allies",
+        "look": "run-in"
+      },
+      {
+        "id": "cpe2bd6o",
+        "type": "text",
+        "field": "notes_2",
+        "heading": "Notes"
+      }
+    ]
+  },
+  "lookups": {
+    "xp_next": {
+      "1": "300",
+      "2": "900",
+      "3": "2,700",
+      "4": "6,500",
+      "5": "14,000",
+      "6": "23,000",
+      "7": "34,000",
+      "8": "48,000",
+      "9": "64,000",
+      "10": "85,000",
+      "11": "100,000",
+      "12": "120,000",
+      "13": "140,000",
+      "14": "165,000",
+      "15": "195,000",
+      "16": "225,000",
+      "17": "265,000",
+      "18": "305,000",
+      "19": "355,000",
+      "20": "—"
+    },
+    "pb": {
+      "1": "+2",
+      "2": "+2",
+      "3": "+2",
+      "4": "+2",
+      "5": "+3",
+      "6": "+3",
+      "7": "+3",
+      "8": "+3",
+      "9": "+4",
+      "10": "+4",
+      "11": "+4",
+      "12": "+4",
+      "13": "+5",
+      "14": "+5",
+      "15": "+5",
+      "16": "+5",
+      "17": "+6",
+      "18": "+6",
+      "19": "+6",
+      "20": "+6"
+    }
+    
+  },
+  "sample": {
+    "name": "Character name",
+    "level": 1,
+    "ac": 16,
+    "initiative": 1,
+    "speed": 30,
+    "pb": 2,
+    "hp": 12,
+    "stats": [
+      15,
+      14,
+      13,
+      12,
+      10,
+      8
+    ],
+    "athletics_prof": "◆",
+    "perception_prof": "◆"
+  },
+  "recovery": [
+    {
+      "id": "short-rest",
+      "name": "Short rest",
+      "rules": [
+        {
+          "target": {
+            "kind": "counters",
+            "field": "death_save_success",
+            "rows": "all"
+          },
+          "does": "full"
+        },
+        {
+          "target": {
+            "kind": "counters",
+            "field": "death_save_failure",
+            "rows": "all"
+          },
+          "does": "full"
+        }
+      ],
+      "choices": [
+        {
+          "id": "step-sr01",
+          "prompt": "Choose actions during short rest",
+          "min": 0,
+          "max": 3,
+          "repeat": true,
+          "actions": [
+            {
+              "id": "act-sr-hd",
+              "name": "Spend Hit Dice",
+              "rules": [
+                {
+                  "target": {
+                    "kind": "resource",
+                    "field": "hp"
+                  },
+                  "does": "spend",
+                  "from": {
+                    "kind": "counters",
+                    "field": "hit_dice_pool",
+                    "rows": "all"
+                  },
+                  "each": "1d8 + @con.mod"
+                }
+              ],
+              "text": "Spend one or more Hit Dice to regain HP (roll one die per die spent, adding the Constitution modifier to each)."
+            },
+            {
+              "id": "act-sr-class",
+              "name": "Recharge Short Rest Features",
+              "rules": [
+                {
+                  "target": {
+                    "kind": "counters",
+                    "field": "class_resources",
+                    "rows": [
+                      "short-rest"
+                    ]
+                  },
+                  "does": "full"
+                },
+                {
+                  "target": {
+                    "kind": "counters",
+                    "field": "action_uses",
+                    "rows": [
+                      "short-rest"
+                    ]
+                  },
+                  "does": "full"
+                },
+                {
+                  "target": {
+                    "kind": "counters",
+                    "field": "bonus_action_uses",
+                    "rows": [
+                      "short-rest"
+                    ]
+                  },
+                  "does": "full"
+                },
+                {
+                  "target": {
+                    "kind": "counters",
+                    "field": "reaction_uses",
+                    "rows": [
+                      "short-rest"
+                    ]
+                  },
+                  "does": "full"
+                },
+                {
+                  "target": {
+                    "kind": "counters",
+                    "field": "class_feature_uses",
+                    "rows": [
+                      "short-rest"
+                    ]
+                  },
+                  "does": "full"
+                },
+                {
+                  "target": {
+                    "kind": "counters",
+                    "field": "species_trait_uses",
+                    "rows": [
+                      "short-rest"
+                    ]
+                  },
+                  "does": "full"
+                },
+                {
+                  "target": {
+                    "kind": "counters",
+                    "field": "feat_uses",
+                    "rows": [
+                      "short-rest"
+                    ]
+                  },
+                  "does": "full"
+                }
+              ],
+              "text": "Regain expended uses of Channel Divinity or other short-rest recharge abilities."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "long-rest",
+      "name": "Long rest",
+      "rules": [
+        {
+          "target": {
+            "kind": "resource",
+            "field": "hp"
+          },
+          "does": "full"
+        },
+        {
+          "target": {
+            "kind": "counters",
+            "field": "hit_dice_pool",
+            "rows": "all"
+          },
+          "does": "share",
+          "share": 0.5,
+          "round": "up",
+          "min": 1
+        },
+        {
+          "target": {
+            "kind": "counters",
+            "field": "slots",
+            "rows": "all"
+          },
+          "does": "full"
+        },
+        {
+          "target": {
+            "kind": "counters",
+            "field": "class_resources",
+            "rows": "all"
+          },
+          "does": "full"
+        },
+        {
+          "target": {
+            "kind": "counters",
+            "field": "death_save_success",
+            "rows": "all"
+          },
+          "does": "full"
+        },
+        {
+          "target": {
+            "kind": "counters",
+            "field": "death_save_failure",
+            "rows": "all"
+          },
+          "does": "full"
+        },
+        {
+          "target": {
+            "kind": "counters",
+            "field": "action_uses",
+            "rows": "all"
+          },
+          "does": "full"
+        },
+        {
+          "target": {
+            "kind": "counters",
+            "field": "bonus_action_uses",
+            "rows": "all"
+          },
+          "does": "full"
+        },
+        {
+          "target": {
+            "kind": "counters",
+            "field": "reaction_uses",
+            "rows": "all"
+          },
+          "does": "full"
+        },
+        {
+          "target": {
+            "kind": "counters",
+            "field": "class_feature_uses",
+            "rows": "all"
+          },
+          "does": "full"
+        },
+        {
+          "target": {
+            "kind": "counters",
+            "field": "species_trait_uses",
+            "rows": "all"
+          },
+          "does": "full"
+        },
+        {
+          "target": {
+            "kind": "counters",
+            "field": "feat_uses",
+            "rows": "all"
+          },
+          "does": "full"
+        }
+      ]
+    }
+  ]
+}
