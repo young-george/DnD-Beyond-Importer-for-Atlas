@@ -2,7 +2,7 @@ import AbstractRenderer from "./abstract.renderer";
 
 export default class FeaturesRenderer extends AbstractRenderer {
 
-    featsToExclude = ["Dark Bargain", "Character Threads", "Runestones"];
+    featsToExclude = ["Dark Bargain", "Character Threads", "Runestones", "Hero's Journey Boon", "Faction Renown", "Neutral Faction Renown", "Subfaction Renown"];
     
     render(): string {
 return `${this.renderClassFeatures()}
