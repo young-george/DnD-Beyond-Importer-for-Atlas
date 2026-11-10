@@ -1,4 +1,4 @@
-import template from '../Pips 5e (2024) Character Sheet.json' with { type: "json" };
+import template from '../5e (2024) Character Sheet.json' with { type: "json" };
 import {App} from "obsidian";
 
 export default class TemplateManager {
@@ -24,7 +24,7 @@ export default class TemplateManager {
         });
         
         if (!templateExists) {
-            const templateFile = await app.vault.create('atlas-vtt/statblock-templates/Pips 5e (2024) Character Sheet.atlastemplate', JSON.stringify(template, null, 2));
+            await app.vault.create('atlas-vtt/statblock-templates/5e (2024) Character Sheet.atlastemplate', JSON.stringify(template, null, 2));
             return;
         }
 

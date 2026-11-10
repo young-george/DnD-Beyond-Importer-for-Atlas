@@ -1,8 +1,8 @@
 {
   "format": "atlas-statblock-template",
   "version": 1,
-  "id": "5e-2024-character-sheet-pips-4r8tqz",
-  "description": "5E (2024 rules) character sheet, with toggleable use pips for actions, bonus actions, reactions, class features, species traits and feats.",
+  "id": "5e-2024-character-sheet-4r8tqz",
+  "description": "5E (2024 rules) character sheet, as comprehensive as possible",
   "diceSetId": "builtin:d20",
   "derivedFrom": {
     "templateId": "builtin:5e-2024-monster",
@@ -114,7 +114,8 @@
     {
       "key": "pb",
       "label": "Proficiency Bonus",
-      "type": "number"
+      "type": "number",
+      "fallback": "{=floor((level - 1) / 4) + 2}"
     },
     {
       "key": "hp",
@@ -203,8 +204,8 @@
       "label": "Situational Bonuses (Bless / Guidance)",
       "type": "pairs",
       "valueType": "dice"
-    }, 
-{
+    },
+    {
       "key": "acrobatics_prof",
       "label": "O",
       "type": "choice",
@@ -1355,15 +1356,17 @@
         ],
         "rollable": true
       },
-      {
-        "id": "c5pb0000",
-        "type": "stat",
-        "field": "pb",
-        "label": "Proficiency Bonus",
-        "look": "run-in",
+{
+  "id": "c5pb0000",
+  "type": "stat",
+  "field": "pb",
+  "label": "Proficiency Bonus",
+  "look": "run-in",
+  "whenEmpty": "fallback",
+  "fallback": "{=floor((level - 1) / 4) + 2}",
         "rollable": true,
         "addsToRolls": true
-      },
+},
       {
         "id": "c5hd0000",
         "type": "stat",
@@ -1436,7 +1439,7 @@
         ],
         "rollable": true
       },
-{
+      {
         "id": "c5sit001",
         "type": "pairs",
         "field": "bonus_dice",
@@ -1447,9 +1450,8 @@
         "id": "c5skgrp0",
         "type": "section",
         "heading": "Skills",
-        "label": "Skills",
         "blocks": [
-           {
+          {
             "id": "c5sk00r0",
             "type": "row",
             "align": "start",
@@ -3177,7 +3179,8 @@
               }
             ]
           }
-        ]
+        ],
+        "label": "Skills"
       },
       {
         "id": "9y6oth45",
@@ -3798,7 +3801,6 @@
       "19": "+6",
       "20": "+6"
     }
-    
   },
   "sample": {
     "name": "Character name",

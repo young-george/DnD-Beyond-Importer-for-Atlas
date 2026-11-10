@@ -8,7 +8,7 @@ export default class FrontmatterRenderer extends AbstractRenderer {
         return `
 cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
-atlas-template: "${this.existingFrontmatter?.["atlas-template"] ?? "5e-2024-character-sheet-pips-4r8tqz"}"
+atlas-template: "${this.existingFrontmatter?.["atlas-template"] ?? "5e-2024-character-sheet-4r8tqz"}"
 statblock: true
 importer_version: ${pkg.version}
 dndbeyond_id: ${this.character.raw.id}`
