@@ -99,7 +99,7 @@ spell_attack_bonus: ${spellAttackBonus >= 0 ? `+${spellAttackBonus}` : `${spellA
         return [...byLevel.entries()].map(([lvl, spells]) => {
             return `${spellTabNames[lvl]}:\n${spells.map(spell => `- name: "${this.character.linkName(spell.definition?.name, spell.definition?.description)} ${spell.upcastLevel ? `(Upcast)` : ""}" 
   range: ${spell.definition?.range?.rangeValue ? `${spell.definition?.range?.rangeValue} ft` : spell.definition?.range?.origin}
-  duration: ${durations[spell.definition?.duration?.durationType ?? "None"](spell.definition?.duration!)}
+  duration: ${durations[spell.definition?.duration?.durationType ?? "None"](spell.definition?.duration ?? {durationUnit: "None", durationInterval: 0})}
   cost: ${costs[spell.definition?.activation?.activationType ?? 8]}
   damage: ${this.getDamage(spell)}
   type: ${this.getDamageType(spell)}
@@ -113,7 +113,7 @@ spell_attack_bonus: ${spellAttackBonus >= 0 ? `+${spellAttackBonus}` : `${spellA
             const modifiers = spell.definition?.modifiers.filter(mod => mod.type == 'damage').map(mod => ({baseDice: mod.die, upcastDice: mod.atHigherLevels?.higherLevelDefinitions?.[0]?.dice}));
             
             const diceStrings = modifiers?.map(mod => {
-                const diceCount = mod.baseDice?.diceCount + (mod.upcastDice?.diceCount ?? 0) * (spell.upcastLevel! - spell.definition!.level);
+                const diceCount = (mod.baseDice?.diceCount ?? 0) + ((mod.upcastDice?.diceCount ?? 0) * ((spell.upcastLevel ?? 0) - (spell.definition?.level ?? 0)));
                 return `${diceCount}d${mod.baseDice?.diceValue}`;
             });
             

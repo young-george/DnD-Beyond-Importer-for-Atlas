@@ -36,6 +36,7 @@ export interface DdbStat {
 }
 
 export interface DdbDice {
+    diceCount: number;
     diceValue: number;
     diceString: string;
 }
@@ -98,6 +99,7 @@ export interface DdbDefinition {
     requiredLevel: number;
     displayOrder: number;
     stealthCheck?: number;
+    canCastAtHigherLevel?: boolean;
     duration?: {
         durationType: string;
         durationUnit: string;
