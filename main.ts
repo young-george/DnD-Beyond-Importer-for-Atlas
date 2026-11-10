@@ -6,7 +6,7 @@ import {
 	TFile,
 	WorkspaceLeaf,
 } from "obsidian";
-import {DdbApiResponse, DEFAULT_SETTINGS, DnDBeyondImporterSettings} from "./src/types";
+import {DdbApiResponse, DEFAULT_SETTINGS, DnDBeyondImporterSettings, PartyInventory} from "./src/types";
 import DnDBeyondSettingTab from "./src/settings-tab";
 import ImportModal from "./src/import-modal";
 import MarkdownBuilder from "./src/markdown.builder";
@@ -65,8 +65,6 @@ export default class DnDBeyondImporterPlugin extends Plugin {
 							}
 						}
 						
-					} else {
-						console.log('No active tab');
 					}
             	})
 
@@ -179,7 +177,7 @@ export default class DnDBeyondImporterPlugin extends Plugin {
 		}
 
 		let data: DdbApiResponse;
-		let partyInventory: any = {};
+		let partyInventory: PartyInventory = { data: { partyItems: [] } };
 		try {
 			const resp = await requestUrl({
 				url: `https://character-service.dndbeyond.com/character/v5/character/${id}?includeCustomItems=true`,
@@ -192,7 +190,7 @@ export default class DnDBeyondImporterPlugin extends Plugin {
 					url: `https://character-service.dndbeyond.com/character/v5/party/inventory/${data.data.campaign.id}`,
 					headers: { Accept: "application/json" },
 				});
-				partyInventory = partyInv.json;
+				partyInventory = partyInv.json as PartyInventory;
 			}
 		} catch (e) {
 			const msg = e instanceof Error ? e.message : String(e);
@@ -206,7 +204,8 @@ export default class DnDBeyondImporterPlugin extends Plugin {
 			throw new Error("Unexpected D&D Beyond API response structure.");
 		}
 
-		char.modifiers?.item?.push(...(partyInventory?.data?.partyItems?.filter(i => i.equippedEntityId == char.id).map(i => i.definition.grantedModifiers ?? []).flat() ?? []));
+		const partyItems = partyInventory?.data?.partyItems?.filter(i => i.equippedEntityId == char.id)?.map(i => i.definition.grantedModifiers ?? [])?.flat() ?? [];
+		char.modifiers?.item?.push(...partyItems);
 
 		const existing: TFile | undefined = this.app.vault.getMarkdownFiles().find(
 			(f: TFile) => {
@@ -240,7 +239,7 @@ export default class DnDBeyondImporterPlugin extends Plugin {
 
 		try {
 			if (existing) {
-				imagePath = existing.parent?.path!;
+				imagePath = existing.parent?.path ?? '';
 				await this.app.vault.modify(existing, markdown);
 				
 			} else {
@@ -283,7 +282,7 @@ export default class DnDBeyondImporterPlugin extends Plugin {
 			try {
 				await this.app.vault.createBinary(`${imageDirectory}/${char.name ?? "character"}_${char.id}.jpg`, await requestUrl({url: char.decorations?.avatarUrl ?? ""}).arrayBuffer);
 			} catch (e) {
-				console.log(e);
+				console.error(e);
 			}
 		}
 

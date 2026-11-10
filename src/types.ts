@@ -76,6 +76,7 @@ export interface DdbRange {
 }
 
 export interface DdbDefinition {
+    grantedModifiers: DdbModifier[];
     id?: number;
     definitionKey?: string;
     categoryId?: number;
@@ -310,3 +311,14 @@ export const DEFAULT_SETTINGS: DnDBeyondImporterSettings = {
 // Every roll always resolves to one of the three states; nothing is ever
 // "no status" — it's an explicit import of what D&D Beyond reports.
 export type AdvState = "advantage" | "disadvantage" | "none";
+
+export interface PartyInventory {
+    data: {
+        partyItems: {
+            definition: DdbDefinition;
+            quantity: number;
+            equippedEntityId: number;
+            grantedModifiers: DdbModifier[];
+        }[];
+    };
+}
