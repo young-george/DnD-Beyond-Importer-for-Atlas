@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-pips-4r8tqz"
 statblock: true
-importer_version: 0.0.7
+importer_version: 1.0.1
 dndbeyond_id: 168838522
 name: Raya
 species: "Human"
@@ -130,10 +130,10 @@ actions:
   desc: " "
 bonus_actions:
 - name: "Spells"
-  range: "undefined"
+  range: ""
   attack: ""
-  damage: "undefined"
-  type: "undefined"
+  damage: ""
+  type: ""
   desc: "Divine Smite, Divine Smite, Shield of Faith, Divine Smite, Searing Smite, Shield of Faith, Divine Favor, Thunderous Smite "
 - name: "Channel Divinity: Divine Sense"
   range: ""
@@ -201,59 +201,456 @@ slots:
   used: 0
 
 tab_3:
-- name: "Aid" 
+- name: "Aid " 
   range: 30 ft
   duration: Up to 8 hours
-- name: "Find Steed" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Bless (Upcast)" 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 3d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 3d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 3d8
+  type: Radiant
+- name: "Find Steed " 
   range: 30 ft
   duration: Instantaneous
-- name: "Find Steed" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Find Steed " 
   range: 30 ft
   duration: Instantaneous
-- name: "Zone of Truth" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Searing Smite (Upcast)" 
+  range: Self
+  duration: Up to 1 minute
+  cost: Bonus Action
+  damage: 2d6 + 2d6
+  type: Fire, Fire
+- name: "Thunderous Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 3d6
+  type: Thunder
+- name: "Zone of Truth " 
   range: 60 ft
   duration: Up to 10 minutes
-tab_2:
-- name: "Bless" 
+  cost: Action
+  damage: 
+  type: 
+
+tab_4:
+- name: "Aid (Upcast)" 
+  range: 30 ft
+  duration: Up to 8 hours
+  cost: Action
+  damage: 
+  type: 
+- name: "Bless (Upcast)" 
   range: 30 ft
   duration: Concentration, up to 1 minute
-- name: "Divine Favor" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 4d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 4d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 4d8
+  type: Radiant
+- name: "Searing Smite (Upcast)" 
   range: Self
   duration: Up to 1 minute
-- name: "Divine Smite" 
+  cost: Bonus Action
+  damage: 3d6 + 3d6
+  type: Fire, Fire
+- name: "Thunderous Smite (Upcast)" 
   range: Self
   duration: Instantaneous
-- name: "Divine Smite" 
+  cost: Bonus Action
+  damage: 4d6
+  type: Thunder
+
+tab_5:
+- name: "Aid (Upcast)" 
+  range: 30 ft
+  duration: Up to 8 hours
+  cost: Action
+  damage: 
+  type: 
+- name: "Bless (Upcast)" 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Divine Smite (Upcast)" 
   range: Self
   duration: Instantaneous
-- name: "Divine Smite" 
+  cost: Bonus Action
+  damage: 5d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
   range: Self
   duration: Instantaneous
-- name: "Protection from Evil and Good" 
+  cost: Bonus Action
+  damage: 5d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 5d8
+  type: Radiant
+- name: "Searing Smite (Upcast)" 
+  range: Self
+  duration: Up to 1 minute
+  cost: Bonus Action
+  damage: 4d6 + 4d6
+  type: Fire, Fire
+- name: "Thunderous Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 5d6
+  type: Thunder
+
+tab_6:
+- name: "Aid (Upcast)" 
+  range: 30 ft
+  duration: Up to 8 hours
+  cost: Action
+  damage: 
+  type: 
+- name: "Bless (Upcast)" 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 6d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 6d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 6d8
+  type: Radiant
+- name: "Searing Smite (Upcast)" 
+  range: Self
+  duration: Up to 1 minute
+  cost: Bonus Action
+  damage: 5d6 + 5d6
+  type: Fire, Fire
+- name: "Thunderous Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 6d6
+  type: Thunder
+
+tab_7:
+- name: "Aid (Upcast)" 
+  range: 30 ft
+  duration: Up to 8 hours
+  cost: Action
+  damage: 
+  type: 
+- name: "Bless (Upcast)" 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 7d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 7d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 7d8
+  type: Radiant
+- name: "Searing Smite (Upcast)" 
+  range: Self
+  duration: Up to 1 minute
+  cost: Bonus Action
+  damage: 6d6 + 6d6
+  type: Fire, Fire
+- name: "Thunderous Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 7d6
+  type: Thunder
+
+tab_8:
+- name: "Aid (Upcast)" 
+  range: 30 ft
+  duration: Up to 8 hours
+  cost: Action
+  damage: 
+  type: 
+- name: "Bless (Upcast)" 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 8d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 8d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 8d8
+  type: Radiant
+- name: "Searing Smite (Upcast)" 
+  range: Self
+  duration: Up to 1 minute
+  cost: Bonus Action
+  damage: 7d6 + 7d6
+  type: Fire, Fire
+- name: "Thunderous Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 8d6
+  type: Thunder
+
+tab_9:
+- name: "Aid (Upcast)" 
+  range: 30 ft
+  duration: Up to 8 hours
+  cost: Action
+  damage: 
+  type: 
+- name: "Bless (Upcast)" 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 9d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 9d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 9d8
+  type: Radiant
+- name: "Searing Smite (Upcast)" 
+  range: Self
+  duration: Up to 1 minute
+  cost: Bonus Action
+  damage: 8d6 + 8d6
+  type: Fire, Fire
+- name: "Thunderous Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 9d6
+  type: Thunder
+
+tab_10:
+- name: "Aid (Upcast)" 
+  range: 30 ft
+  duration: Up to 8 hours
+  cost: Action
+  damage: 
+  type: 
+- name: "Bless (Upcast)" 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 10d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 10d8
+  type: Radiant
+- name: "Divine Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 10d8
+  type: Radiant
+- name: "Searing Smite (Upcast)" 
+  range: Self
+  duration: Up to 1 minute
+  cost: Bonus Action
+  damage: 9d6 + 9d6
+  type: Fire, Fire
+- name: "Thunderous Smite (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 10d6
+  type: Thunder
+
+tab_2:
+- name: "Bless " 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Divine Favor " 
+  range: Self
+  duration: Up to 1 minute
+  cost: Bonus Action
+  damage: 1d4
+  type: Radiant
+- name: "Divine Smite " 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 2d8
+  type: Radiant
+- name: "Divine Smite " 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 2d8
+  type: Radiant
+- name: "Divine Smite " 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 2d8
+  type: Radiant
+- name: "Protection from Evil and Good " 
   range: Touch
   duration: Concentration, up to 10 minutes
-- name: "Searing Smite" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Searing Smite " 
   range: Self
   duration: Up to 1 minute
-- name: "Shield of Faith" 
+  cost: Bonus Action
+  damage: 1d6
+  type: Fire, Fire
+- name: "Shield of Faith " 
   range: 60 ft
   duration: Concentration, up to 10 minutes
-- name: "Shield of Faith" 
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Shield of Faith " 
   range: 60 ft
   duration: Concentration, up to 10 minutes
-- name: "Thunderous Smite" 
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Thunderous Smite " 
   range: Self
   duration: Instantaneous
+  cost: Bonus Action
+  damage: 2d6
+  type: Thunder
+
 spellcasting:
-- name: "Guidance" 
+- name: "Guidance " 
   range: Touch
   duration: Concentration, up to 1 minute
-- name: "Resistance" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Resistance " 
   range: Touch
   duration: Concentration, up to 1 minute
-- name: "Shocking Grasp" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Shocking Grasp " 
   range: Touch
   duration: Instantaneous
+  cost: Action
+  damage: 2d8
+  type: Lightning
 class_features:
 - name: "Core Paladin Traits"
 - name: "Lay On Hands"

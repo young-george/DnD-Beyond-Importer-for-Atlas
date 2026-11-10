@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-pips-4r8tqz"
 statblock: true
-importer_version: 0.0.7
+importer_version: 1.0.1
 dndbeyond_id: 171620138
 name: All feats
 species: "Human"
@@ -435,40 +435,234 @@ otheractions:
   type: ""
   desc: " "
 spellcasting:
-- name: "" 
+- name: " " 
   range: undefined
   duration: Unknown
-- name: "" 
+  cost: Other
+  damage: 
+  type: 
+- name: " " 
   range: undefined
   duration: Unknown
-- name: "Acid Splash" 
+  cost: Other
+  damage: 
+  type: 
+- name: "Acid Splash " 
   range: 60 ft
   duration: Instantaneous
-- name: "Fire Bolt" 
+  cost: Action
+  damage: 1d6
+  type: Acid
+- name: "Fire Bolt " 
   range: 120 ft
   duration: Instantaneous
-- name: "Guidance" 
+  cost: Action
+  damage: 1d10
+  type: Fire
+- name: "Guidance " 
   range: Touch
   duration: Concentration, up to 1 minute
-- name: "Light" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Light " 
   range: Touch
   duration: Up to 1 hour
-- name: "Poison Spray" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Poison Spray " 
   range: 30 ft
   duration: Instantaneous
-- name: "Starry Wisp" 
+  cost: Action
+  damage: 1d12
+  type: Poison
+- name: "Starry Wisp " 
   range: 60 ft
   duration: Instantaneous
+  cost: Action
+  damage: 1d8
+  type: Radiant
+
 tab_2:
-- name: "Bane" 
+- name: "Bane " 
   range: 30 ft
   duration: Concentration, up to 1 minute
-- name: "Charm Person" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Charm Person " 
   range: 30 ft
   duration: Up to 1 hour
-- name: "Chromatic Orb" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Chromatic Orb " 
   range: 90 ft
   duration: Instantaneous
+  cost: Action
+  damage: 3d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+
+tab_3:
+- name: "Bane (Upcast)" 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Charm Person (Upcast)" 
+  range: 30 ft
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Chromatic Orb (Upcast)" 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 4d8 + 4d8 + 4d8 + 4d8 + 4d8 + 4d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+
+tab_4:
+- name: "Bane (Upcast)" 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Charm Person (Upcast)" 
+  range: 30 ft
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Chromatic Orb (Upcast)" 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 5d8 + 5d8 + 5d8 + 5d8 + 5d8 + 5d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+
+tab_5:
+- name: "Bane (Upcast)" 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Charm Person (Upcast)" 
+  range: 30 ft
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Chromatic Orb (Upcast)" 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 6d8 + 6d8 + 6d8 + 6d8 + 6d8 + 6d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+
+tab_6:
+- name: "Bane (Upcast)" 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Charm Person (Upcast)" 
+  range: 30 ft
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Chromatic Orb (Upcast)" 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 7d8 + 7d8 + 7d8 + 7d8 + 7d8 + 7d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+
+tab_7:
+- name: "Bane (Upcast)" 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Charm Person (Upcast)" 
+  range: 30 ft
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Chromatic Orb (Upcast)" 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 8d8 + 8d8 + 8d8 + 8d8 + 8d8 + 8d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+
+tab_8:
+- name: "Bane (Upcast)" 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Charm Person (Upcast)" 
+  range: 30 ft
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Chromatic Orb (Upcast)" 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 9d8 + 9d8 + 9d8 + 9d8 + 9d8 + 9d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+
+tab_9:
+- name: "Bane (Upcast)" 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Charm Person (Upcast)" 
+  range: 30 ft
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Chromatic Orb (Upcast)" 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 10d8 + 10d8 + 10d8 + 10d8 + 10d8 + 10d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+
+tab_10:
+- name: "Bane (Upcast)" 
+  range: 30 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Charm Person (Upcast)" 
+  range: 30 ft
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Chromatic Orb (Upcast)" 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 11d8 + 11d8 + 11d8 + 11d8 + 11d8 + 11d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
 class_features:
 - name: "Core Barbarian Traits"
 - name: "Rage"
@@ -568,7 +762,6 @@ feats:
 - name: "Thrown Weapon Fighting"
 - name: "Two-Weapon Fighting"
 - name: "Unarmed Fighting"
-- name: "Hero's Journey Boon"
 - name: "Arcane Infiltrator"
 equipment:
 - name: "Scale Mail"

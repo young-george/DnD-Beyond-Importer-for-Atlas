@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-pips-4r8tqz"
 statblock: true
-importer_version: 0.0.7
+importer_version: 1.0.1
 dndbeyond_id: 169957259
 name: Elerra
 species: "Tiefling"
@@ -116,10 +116,10 @@ actions:
   desc: " "
 bonus_actions:
 - name: "Spells"
-  range: "undefined"
+  range: ""
   attack: ""
-  damage: "undefined"
-  type: "undefined"
+  damage: ""
+  type: ""
   desc: "Healing Word, Mass Healing Word "
 - name: "Bardic Inspiration"
   range: ""
@@ -195,63 +195,534 @@ slots:
   used: 0
 
 tab_4:
-- name: "Astral Flood" 
+- name: "Astral Flood " 
   range: Self
   duration: Instantaneous
-- name: "Mass Healing Word" 
+  cost: Action
+  damage: 4d10
+  type: Cold, Radiant
+- name: "Command (Upcast)" 
   range: 60 ft
   duration: Instantaneous
-tab_2:
-- name: "Command" 
-  range: 60 ft
-  duration: Instantaneous
-- name: "Cure Wounds" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-- name: "Dissonant Whispers" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Dissonant Whispers (Upcast)" 
   range: 60 ft
   duration: Instantaneous
-- name: "Healing Word" 
+  cost: Action
+  damage: 5d6
+  type: Psychic
+- name: "Healing Word (Upcast)" 
   range: 60 ft
   duration: Instantaneous
-- name: "Hellish Rebuke" 
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Heat Metal (Upcast)" 
+  range: 60 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 3d8
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
   range: 60 ft
   duration: Instantaneous
-- name: "Hellish Rebuke" 
+  cost: Reaction
+  damage: 4d10
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
   range: 60 ft
   duration: Instantaneous
-- name: "Unseen Servant" 
+  cost: Reaction
+  damage: 4d10
+  type: Fire
+- name: "Mass Healing Word " 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+
+tab_5:
+- name: "Astral Flood (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Action
+  damage: 5d10 + 5d10
+  type: Cold, Radiant
+- name: "Command (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Dissonant Whispers (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 6d6
+  type: Psychic
+- name: "Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Heat Metal (Upcast)" 
+  range: 60 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 4d8
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 5d10
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 5d10
+  type: Fire
+- name: "Mass Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+
+tab_6:
+- name: "Astral Flood (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Action
+  damage: 6d10 + 6d10
+  type: Cold, Radiant
+- name: "Command (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Dissonant Whispers (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 7d6
+  type: Psychic
+- name: "Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Heat Metal (Upcast)" 
+  range: 60 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 5d8
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 6d10
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 6d10
+  type: Fire
+- name: "Mass Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+
+tab_7:
+- name: "Astral Flood (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Action
+  damage: 7d10 + 7d10
+  type: Cold, Radiant
+- name: "Command (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Dissonant Whispers (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 8d6
+  type: Psychic
+- name: "Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Heat Metal (Upcast)" 
+  range: 60 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 6d8
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 7d10
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 7d10
+  type: Fire
+- name: "Mass Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+
+tab_8:
+- name: "Astral Flood (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Action
+  damage: 8d10 + 8d10
+  type: Cold, Radiant
+- name: "Command (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Dissonant Whispers (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 9d6
+  type: Psychic
+- name: "Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Heat Metal (Upcast)" 
+  range: 60 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 7d8
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 8d10
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 8d10
+  type: Fire
+- name: "Mass Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+
+tab_9:
+- name: "Astral Flood (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Action
+  damage: 9d10 + 9d10
+  type: Cold, Radiant
+- name: "Command (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Dissonant Whispers (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 10d6
+  type: Psychic
+- name: "Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Heat Metal (Upcast)" 
+  range: 60 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 8d8
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 9d10
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 9d10
+  type: Fire
+- name: "Mass Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+
+tab_10:
+- name: "Astral Flood (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Action
+  damage: 10d10 + 10d10
+  type: Cold, Radiant
+- name: "Command (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Dissonant Whispers (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 11d6
+  type: Psychic
+- name: "Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Heat Metal (Upcast)" 
+  range: 60 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 9d8
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 10d10
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 10d10
+  type: Fire
+- name: "Mass Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+
+tab_2:
+- name: "Command " 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Cure Wounds " 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Dissonant Whispers " 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 3d6
+  type: Psychic
+- name: "Healing Word " 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Hellish Rebuke " 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 2d10
+  type: Fire
+- name: "Hellish Rebuke " 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 2d10
+  type: Fire
+- name: "Unseen Servant " 
   range: 60 ft
   duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+
 tab_3:
-- name: "Crown of Madness" 
+- name: "Command (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Crown of Madness " 
   range: 120 ft
   duration: Concentration, up to 1 minute
-- name: "Darkness" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Darkness " 
   range: 60 ft
   duration: Concentration, up to 10 minutes
-- name: "Darkness" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Darkness " 
   range: 60 ft
   duration: Concentration, up to 10 minutes
-- name: "Heat Metal" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Dissonant Whispers (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 4d6
+  type: Psychic
+- name: "Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Heat Metal " 
   range: 60 ft
   duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 2d8
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 3d10
+  type: Fire
+- name: "Hellish Rebuke (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Reaction
+  damage: 3d10
+  type: Fire
+
 spellcasting:
-- name: "Fire Bolt" 
+- name: "Fire Bolt " 
   range: 120 ft
   duration: Instantaneous
-- name: "Message" 
+  cost: Action
+  damage: 2d10
+  type: Fire
+- name: "Message " 
   range: 120 ft
   duration: Up to 1 round
-- name: "Prestidigitation" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Prestidigitation " 
   range: 10 ft
   duration: Up to 1 hour
-- name: "Thaumaturgy" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Thaumaturgy " 
   range: 30 ft
   duration: Up to 1 minute
-- name: "Vicious Mockery" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Vicious Mockery " 
   range: 60 ft
   duration: Instantaneous
+  cost: Action
+  damage: 2d6
+  type: Psychic
 class_features:
 - name: "Core Bard Traits"
 - name: "Bardic Inspiration"

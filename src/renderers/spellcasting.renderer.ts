@@ -91,6 +91,8 @@ spell_attack_bonus: ${spellAttackBonus >= 0 ? `+${spellAttackBonus}` : `${spellA
             1: 'Action',
             3: 'Bonus Action',
             4: 'Reaction',
+            6: 'Time: 1 minute',
+            7: 'Time: 1 hour',
             8: 'Other'
         }
 
@@ -108,7 +110,7 @@ spell_attack_bonus: ${spellAttackBonus >= 0 ? `+${spellAttackBonus}` : `${spellA
     private getDamage(spell: DdbSpell): string {
 
         if (spell.upcastLevel){
-            const modifiers = spell.definition?.modifiers.filter(mod => mod.type == 'damage').map(mod => ({baseDice: mod.die, upcastDice: mod.atHigherLevels?.higherLevelDefinitions?.[0].dice}));
+            const modifiers = spell.definition?.modifiers.filter(mod => mod.type == 'damage').map(mod => ({baseDice: mod.die, upcastDice: mod.atHigherLevels?.higherLevelDefinitions?.[0]?.dice}));
             
             const diceStrings = modifiers?.map(mod => {
                 const diceCount = mod.baseDice?.diceCount + (mod.upcastDice?.diceCount ?? 0) * (spell.upcastLevel! - spell.definition!.level);

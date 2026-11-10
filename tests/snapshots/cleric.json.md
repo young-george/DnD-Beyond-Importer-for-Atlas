@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-pips-4r8tqz"
 statblock: true
-importer_version: 0.0.7
+importer_version: 1.0.1
 dndbeyond_id: 16051611
 name: Highflow Chugspout the 2nd
 species: "Skeleton"
@@ -121,10 +121,10 @@ actions:
   desc: " "
 bonus_actions:
 - name: "Spells"
-  range: "undefined"
+  range: ""
   attack: ""
-  damage: "undefined"
-  type: "undefined"
+  damage: ""
+  type: ""
   desc: "Healing Word, Shield of Faith "
 - name: "Harness Divine Power"
   range: ""
@@ -180,35 +180,264 @@ slots:
   used: 0
 
 tab_2:
-- name: "Cure Wounds" 
+- name: "Cure Wounds " 
   range: Touch
   duration: Instantaneous
-- name: "Guiding Bolt" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt " 
   range: 120 ft
   duration: Up to 1 round
-- name: "Healing Word" 
+  cost: Action
+  damage: 4d6
+  type: Radiant
+- name: "Healing Word " 
   range: 60 ft
   duration: Instantaneous
-- name: "Shield of Faith" 
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Shield of Faith " 
   range: 60 ft
   duration: Concentration, up to 10 minutes
-spellcasting:
-- name: "Light" 
-  range: Touch
-  duration: Up to 1 hour
-- name: "Mending" 
+  cost: Bonus Action
+  damage: 
+  type: 
+
+tab_3:
+- name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-- name: "Sacred Flame" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 5d6
+  type: Radiant
+- name: "Healing Word (Upcast)" 
   range: 60 ft
   duration: Instantaneous
-- name: "Spare the Dying" 
-  range: Touch
-  duration: Instantaneous
-tab_3:
-- name: "Prayer of Healing" 
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Prayer of Healing " 
   range: 30 ft
   duration: Instantaneous
+  cost: Time: 1 minute
+  damage: 
+  type: 
+
+tab_4:
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 6d6
+  type: Radiant
+- name: "Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Prayer of Healing (Upcast)" 
+  range: 30 ft
+  duration: Instantaneous
+  cost: Time: 1 minute
+  damage: 
+  type: 
+
+tab_5:
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 7d6
+  type: Radiant
+- name: "Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Prayer of Healing (Upcast)" 
+  range: 30 ft
+  duration: Instantaneous
+  cost: Time: 1 minute
+  damage: 
+  type: 
+
+tab_6:
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 8d6
+  type: Radiant
+- name: "Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Prayer of Healing (Upcast)" 
+  range: 30 ft
+  duration: Instantaneous
+  cost: Time: 1 minute
+  damage: 
+  type: 
+
+tab_7:
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 9d6
+  type: Radiant
+- name: "Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Prayer of Healing (Upcast)" 
+  range: 30 ft
+  duration: Instantaneous
+  cost: Time: 1 minute
+  damage: 
+  type: 
+
+tab_8:
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 10d6
+  type: Radiant
+- name: "Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Prayer of Healing (Upcast)" 
+  range: 30 ft
+  duration: Instantaneous
+  cost: Time: 1 minute
+  damage: 
+  type: 
+
+tab_9:
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 11d6
+  type: Radiant
+- name: "Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Prayer of Healing (Upcast)" 
+  range: 30 ft
+  duration: Instantaneous
+  cost: Time: 1 minute
+  damage: 
+  type: 
+
+tab_10:
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 12d6
+  type: Radiant
+- name: "Healing Word (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Prayer of Healing (Upcast)" 
+  range: 30 ft
+  duration: Instantaneous
+  cost: Time: 1 minute
+  damage: 
+  type: 
+
+spellcasting:
+- name: "Light " 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Mending " 
+  range: Touch
+  duration: Instantaneous
+  cost: Time: 1 minute
+  damage: 
+  type: 
+- name: "Sacred Flame " 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 2d8
+  type: Radiant
+- name: "Spare the Dying " 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type:
 class_features:
 - name: "Domain Spells"
 - name: "Hit Points"

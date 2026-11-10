@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-pips-4r8tqz"
 statblock: true
-importer_version: 0.0.7
+importer_version: 1.0.1
 dndbeyond_id: 163437390
 name: Finrod Dewstar
 species: "Elf"
@@ -134,10 +134,10 @@ actions:
   desc: " "
 bonus_actions:
 - name: "Spells"
-  range: "undefined"
+  range: ""
   attack: ""
-  damage: "undefined"
-  type: "undefined"
+  damage: ""
+  type: ""
   desc: "Hunter's Mark, Misty Step, Misty Step, Barkskin "
 - name: "Archer: Luminous Arrow"
   range: ""
@@ -205,93 +205,744 @@ slots:
   used: 0
 
 tab_3:
-- name: "Aid" 
+- name: "Aid " 
   range: 30 ft
   duration: Up to 8 hours
-- name: "Barkskin" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Barkskin " 
   range: Touch
   duration: Up to 1 hour
-- name: "Hold Person" 
-  range: 60 ft
-  duration: Concentration, up to 1 minute
-- name: "Misty Step" 
-  range: Self
-  duration: Instantaneous
-- name: "Misty Step" 
-  range: Self
-  duration: Instantaneous
-- name: "Pass without Trace" 
-  range: Self
-  duration: Concentration, up to 1 hour
-- name: "Pass without Trace" 
-  range: Self
-  duration: Concentration, up to 1 hour
-spellcasting:
-- name: "Blade Ward" 
-  range: Self
-  duration: Concentration, up to 1 minute
-- name: "Druidcraft" 
-  range: 30 ft
-  duration: Instantaneous
-- name: "Elementalism" 
-  range: 30 ft
-  duration: Instantaneous
-- name: "Guidance" 
-  range: Touch
-  duration: Concentration, up to 1 minute
-- name: "Message" 
-  range: 120 ft
-  duration: Up to 1 round
-- name: "Starry Wisp" 
-  range: 60 ft
-  duration: Instantaneous
-- name: "Toll the Dead" 
-  range: 60 ft
-  duration: Instantaneous
-tab_4:
-- name: "Call Lightning" 
-  range: 120 ft
-  duration: Concentration, up to 10 minutes
-- name: "Wind Wall" 
-  range: 120 ft
-  duration: Concentration, up to 1 minute
-tab_2:
-- name: "Chromatic Orb" 
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Chromatic Orb (Upcast)" 
   range: 90 ft
   duration: Instantaneous
-- name: "Cure Wounds" 
+  cost: Action
+  damage: 4d8 + 4d8 + 4d8 + 4d8 + 4d8 + 4d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+- name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-- name: "Detect Magic" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 5d6
+  type: Radiant
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 5d6
+  type: Radiant
+- name: "Hold Person " 
+  range: 60 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Hunter's Mark (Upcast)" 
+  range: 90 ft
+  duration: Concentration, up to 1 hour
+  cost: Bonus Action
+  damage: 1d6
+  type: Force
+- name: "Ice Knife (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 1d10 + 3d6
+  type: Piercing, Cold
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Misty Step " 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Misty Step " 
+  range: Self
+  duration: Instantaneous
+  cost: Bonus Action
+  damage: 
+  type: 
+- name: "Pass without Trace " 
+  range: Self
+  duration: Concentration, up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Pass without Trace " 
+  range: Self
+  duration: Concentration, up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Thunderwave (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Action
+  damage: 3d8
+  type: Thunder
+
+tab_4:
+- name: "Aid (Upcast)" 
+  range: 30 ft
+  duration: Up to 8 hours
+  cost: Action
+  damage: 
+  type: 
+- name: "Call Lightning " 
+  range: 120 ft
+  duration: Concentration, up to 10 minutes
+  cost: Action
+  damage: 3d10 + 1d10
+  type: Lightning, Lightning
+- name: "Chromatic Orb (Upcast)" 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 5d8 + 5d8 + 5d8 + 5d8 + 5d8 + 5d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 6d6
+  type: Radiant
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 6d6
+  type: Radiant
+- name: "Hold Person (Upcast)" 
+  range: 60 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Hunter's Mark (Upcast)" 
+  range: 90 ft
+  duration: Concentration, up to 1 hour
+  cost: Bonus Action
+  damage: 1d6
+  type: Force
+- name: "Ice Knife (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 1d10 + 4d6
+  type: Piercing, Cold
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Thunderwave (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Action
+  damage: 4d8
+  type: Thunder
+- name: "Wind Wall " 
+  range: 120 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 4d8
+  type: Bludgeoning
+
+tab_5:
+- name: "Aid (Upcast)" 
+  range: 30 ft
+  duration: Up to 8 hours
+  cost: Action
+  damage: 
+  type: 
+- name: "Call Lightning (Upcast)" 
+  range: 120 ft
+  duration: Concentration, up to 10 minutes
+  cost: Action
+  damage: 4d10 + 1d10
+  type: Lightning, Lightning
+- name: "Chromatic Orb (Upcast)" 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 6d8 + 6d8 + 6d8 + 6d8 + 6d8 + 6d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 7d6
+  type: Radiant
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 7d6
+  type: Radiant
+- name: "Hold Person (Upcast)" 
+  range: 60 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Hunter's Mark (Upcast)" 
+  range: 90 ft
+  duration: Concentration, up to 1 hour
+  cost: Bonus Action
+  damage: 1d6
+  type: Force
+- name: "Ice Knife (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 1d10 + 5d6
+  type: Piercing, Cold
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Thunderwave (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Action
+  damage: 5d8
+  type: Thunder
+
+tab_6:
+- name: "Aid (Upcast)" 
+  range: 30 ft
+  duration: Up to 8 hours
+  cost: Action
+  damage: 
+  type: 
+- name: "Call Lightning (Upcast)" 
+  range: 120 ft
+  duration: Concentration, up to 10 minutes
+  cost: Action
+  damage: 5d10 + 1d10
+  type: Lightning, Lightning
+- name: "Chromatic Orb (Upcast)" 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 7d8 + 7d8 + 7d8 + 7d8 + 7d8 + 7d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 8d6
+  type: Radiant
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 8d6
+  type: Radiant
+- name: "Hold Person (Upcast)" 
+  range: 60 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Hunter's Mark (Upcast)" 
+  range: 90 ft
+  duration: Concentration, up to 1 hour
+  cost: Bonus Action
+  damage: 1d6
+  type: Force
+- name: "Ice Knife (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 1d10 + 6d6
+  type: Piercing, Cold
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Thunderwave (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Action
+  damage: 6d8
+  type: Thunder
+
+tab_7:
+- name: "Aid (Upcast)" 
+  range: 30 ft
+  duration: Up to 8 hours
+  cost: Action
+  damage: 
+  type: 
+- name: "Call Lightning (Upcast)" 
+  range: 120 ft
+  duration: Concentration, up to 10 minutes
+  cost: Action
+  damage: 6d10 + 1d10
+  type: Lightning, Lightning
+- name: "Chromatic Orb (Upcast)" 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 8d8 + 8d8 + 8d8 + 8d8 + 8d8 + 8d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 9d6
+  type: Radiant
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 9d6
+  type: Radiant
+- name: "Hold Person (Upcast)" 
+  range: 60 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Hunter's Mark (Upcast)" 
+  range: 90 ft
+  duration: Concentration, up to 1 hour
+  cost: Bonus Action
+  damage: 1d6
+  type: Force
+- name: "Ice Knife (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 1d10 + 7d6
+  type: Piercing, Cold
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Thunderwave (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Action
+  damage: 7d8
+  type: Thunder
+
+tab_8:
+- name: "Aid (Upcast)" 
+  range: 30 ft
+  duration: Up to 8 hours
+  cost: Action
+  damage: 
+  type: 
+- name: "Call Lightning (Upcast)" 
+  range: 120 ft
+  duration: Concentration, up to 10 minutes
+  cost: Action
+  damage: 7d10 + 1d10
+  type: Lightning, Lightning
+- name: "Chromatic Orb (Upcast)" 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 9d8 + 9d8 + 9d8 + 9d8 + 9d8 + 9d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 10d6
+  type: Radiant
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 10d6
+  type: Radiant
+- name: "Hold Person (Upcast)" 
+  range: 60 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Hunter's Mark (Upcast)" 
+  range: 90 ft
+  duration: Concentration, up to 1 hour
+  cost: Bonus Action
+  damage: 1d6
+  type: Force
+- name: "Ice Knife (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 1d10 + 8d6
+  type: Piercing, Cold
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Thunderwave (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Action
+  damage: 8d8
+  type: Thunder
+
+tab_9:
+- name: "Aid (Upcast)" 
+  range: 30 ft
+  duration: Up to 8 hours
+  cost: Action
+  damage: 
+  type: 
+- name: "Call Lightning (Upcast)" 
+  range: 120 ft
+  duration: Concentration, up to 10 minutes
+  cost: Action
+  damage: 8d10 + 1d10
+  type: Lightning, Lightning
+- name: "Chromatic Orb (Upcast)" 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 10d8 + 10d8 + 10d8 + 10d8 + 10d8 + 10d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 11d6
+  type: Radiant
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 11d6
+  type: Radiant
+- name: "Hold Person (Upcast)" 
+  range: 60 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Hunter's Mark (Upcast)" 
+  range: 90 ft
+  duration: Concentration, up to 1 hour
+  cost: Bonus Action
+  damage: 1d6
+  type: Force
+- name: "Ice Knife (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 1d10 + 9d6
+  type: Piercing, Cold
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Thunderwave (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Action
+  damage: 9d8
+  type: Thunder
+
+tab_10:
+- name: "Aid (Upcast)" 
+  range: 30 ft
+  duration: Up to 8 hours
+  cost: Action
+  damage: 
+  type: 
+- name: "Call Lightning (Upcast)" 
+  range: 120 ft
+  duration: Concentration, up to 10 minutes
+  cost: Action
+  damage: 9d10 + 1d10
+  type: Lightning, Lightning
+- name: "Chromatic Orb (Upcast)" 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 11d8 + 11d8 + 11d8 + 11d8 + 11d8 + 11d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+- name: "Cure Wounds (Upcast)" 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 12d6
+  type: Radiant
+- name: "Guiding Bolt (Upcast)" 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 12d6
+  type: Radiant
+- name: "Hold Person (Upcast)" 
+  range: 60 ft
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Hunter's Mark (Upcast)" 
+  range: 90 ft
+  duration: Concentration, up to 1 hour
+  cost: Bonus Action
+  damage: 1d6
+  type: Force
+- name: "Ice Knife (Upcast)" 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 1d10 + 10d6
+  type: Piercing, Cold
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Longstrider (Upcast)" 
+  range: Touch
+  duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type: 
+- name: "Thunderwave (Upcast)" 
+  range: Self
+  duration: Instantaneous
+  cost: Action
+  damage: 10d8
+  type: Thunder
+
+spellcasting:
+- name: "Blade Ward " 
+  range: Self
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Druidcraft " 
+  range: 30 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Elementalism " 
+  range: 30 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Guidance " 
+  range: Touch
+  duration: Concentration, up to 1 minute
+  cost: Action
+  damage: 
+  type: 
+- name: "Message " 
+  range: 120 ft
+  duration: Up to 1 round
+  cost: Action
+  damage: 
+  type: 
+- name: "Starry Wisp " 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 2d8
+  type: Radiant
+- name: "Toll the Dead " 
+  range: 60 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 2d8
+  type: Necrotic
+
+tab_2:
+- name: "Chromatic Orb " 
+  range: 90 ft
+  duration: Instantaneous
+  cost: Action
+  damage: 3d8
+  type: Acid, Cold, Fire, Lightning, Poison, Thunder
+- name: "Cure Wounds " 
+  range: Touch
+  duration: Instantaneous
+  cost: Action
+  damage: 
+  type: 
+- name: "Detect Magic " 
   range: Self
   duration: Concentration, up to 10 minutes
-- name: "Find Familiar" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Find Familiar " 
   range: 10 ft
   duration: Instantaneous
-- name: "Guiding Bolt" 
+  cost: Time: 1 hour
+  damage: 
+  type: 
+- name: "Guiding Bolt " 
   range: 120 ft
   duration: Up to 1 round
-- name: "Guiding Bolt" 
+  cost: Action
+  damage: 4d6
+  type: Radiant
+- name: "Guiding Bolt " 
   range: 120 ft
   duration: Up to 1 round
-- name: "Hunter's Mark" 
+  cost: Action
+  damage: 4d6
+  type: Radiant
+- name: "Hunter's Mark " 
   range: 90 ft
   duration: Concentration, up to 1 hour
-- name: "Ice Knife" 
+  cost: Bonus Action
+  damage: 1d6
+  type: Force
+- name: "Ice Knife " 
   range: 60 ft
   duration: Instantaneous
-- name: "Longstrider" 
+  cost: Action
+  damage: 1d10 + 2d6
+  type: Piercing, Cold
+- name: "Longstrider " 
   range: Touch
   duration: Up to 1 hour
-- name: "Longstrider" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Longstrider " 
   range: Touch
   duration: Up to 1 hour
-- name: "Speak with Animals" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Speak with Animals " 
   range: Self
   duration: Up to 10 minutes
-- name: "Thunderwave" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Thunderwave " 
   range: Self
   duration: Instantaneous
+  cost: Action
+  damage: 2d8
+  type: Thunder
 class_features:
 - name: "Core Druid Traits"
 - name: "Spellcasting"

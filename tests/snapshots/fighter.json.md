@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-pips-4r8tqz"
 statblock: true
-importer_version: 0.0.7
+importer_version: 1.0.1
 dndbeyond_id: 173032227
 name: Fighty McFightface
 species: "Goliath"
@@ -302,7 +302,6 @@ feats:
 - name: "10: Weapon Mastery"
 - name: "Great Weapon Fighting"
 - name: "Savage Attacker"
-- name: "Hero's Journey Boon"
 equipment:
 - name: "Chain Mail"
   desc: "— **Quantity:** 1, **Weight:** 55 lb."

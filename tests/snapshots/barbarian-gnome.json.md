@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-pips-4r8tqz"
 statblock: true
-importer_version: 0.0.7
+importer_version: 1.0.1
 dndbeyond_id: 163345362
 name: Vowyn Zornall
 species: "Gnome"
@@ -147,15 +147,24 @@ bonus_actions:
   type: ""
   desc: " "
 spellcasting:
-- name: "Mending" 
+- name: "Mending " 
   range: Touch
   duration: Instantaneous
-- name: "Prestidigitation" 
+  cost: Time: 1 minute
+  damage: 
+  type: 
+- name: "Prestidigitation " 
   range: 10 ft
   duration: Up to 1 hour
-- name: "Prestidigitation" 
+  cost: Action
+  damage: 
+  type: 
+- name: "Prestidigitation " 
   range: 10 ft
   duration: Up to 1 hour
+  cost: Action
+  damage: 
+  type:
 class_features:
 - name: "Core Barbarian Traits"
 - name: "Rage"

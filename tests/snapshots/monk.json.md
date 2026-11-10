@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-pips-4r8tqz"
 statblock: true
-importer_version: 0.0.7
+importer_version: 1.0.1
 dndbeyond_id: 173042556
 name: Monk
 species: "Human"
@@ -257,7 +257,6 @@ species_traits:
 feats:
 - name: "Ability Score Improvement"
 - name: "Alert"
-- name: "Hero's Journey Boon"
 
 currency:
 - 0
