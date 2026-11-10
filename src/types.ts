@@ -41,6 +41,12 @@ export interface DdbDice {
 }
 
 export interface DdbModifier {
+    atHigherLevels: {
+        higherLevelDefinitions: {
+            level: number;
+            dice: DdbDice;
+        }[];
+    };
     restriction: string;
     description?: string;
     statId?: number;
@@ -106,6 +112,7 @@ export interface DdbSpell {
     };
     spellCastingAbilityId?: number;
     range?: DdbRange;
+    upcastLevel?: number;
 }
 
 export interface DdbClassSpell {

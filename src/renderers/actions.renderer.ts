@@ -230,7 +230,7 @@ export default class ActionsRenderer extends AbstractRenderer {
             responses[action.activation?.activationType ?? 0]?.push(builtAction);
         }
 
-        responses[3] = responses[3]?.length > 0 ? [{name: 'Spells', notes: responses[3].map(a => a.name).join(", ")} as CharacterAction] : [];
+        responses[3] = responses[3]?.length > 0 ? [{name: 'Spells', range: '', damageDice: '', damageType: '', damageBonus: 0, notes: responses[3].map(a => a.name).join(", ")} as CharacterAction] : [];
         
         return responses.map(response => response.toSorted((a, b) => a.name.localeCompare(b.name)));
 

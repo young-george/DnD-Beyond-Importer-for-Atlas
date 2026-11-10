@@ -11,6 +11,10 @@ ${this.renderSpellSlots()}
 ${this.renderSpells()}`;
     }
 
+    getSpellSlots() {
+        return this.character.raw.classes?.map(c => c.definition?.spellRules?.levelSpellSlots[c.level ?? 0]).toSorted((a, b) => (a?.length ?? 0) - (b?.length ?? 0))[0];
+    }
+    
     renderSpellcastingDetails(): string {
         const spellcastingAbility = this.character.raw.classes?.[0].definition?.spellCastingAbilityId;
 
@@ -29,7 +33,7 @@ spell_attack_bonus: ${spellAttackBonus >= 0 ? `+${spellAttackBonus}` : `${spellA
     }
 
     renderSpellSlots(): string {
-        const slots = this.character.raw.classes?.[0].definition?.spellRules?.levelSpellSlots[this.character.raw.classes?.[0].level ?? 0];
+        const slots = this.getSpellSlots();
         if (!slots || !this.character.spellcastingModifier) return "";
 
         const slotDetails = slots.map((s, i) => ({
@@ -60,11 +64,19 @@ spell_attack_bonus: ${spellAttackBonus >= 0 ? `+${spellAttackBonus}` : `${spellA
         
         const spellTabNames = ['spellcasting', 'tab_2', 'tab_3', 'tab_4', 'tab_5', 'tab_6', 'tab_7', 'tab_8', 'tab_9', 'tab_10'];
 
+        const maximumLevel = this.getSpellSlots()?.length;
+        
         const byLevel: Map<number, DdbSpell[]> = new Map();
         for (const spell of allSpells) {
             const lvl = spell.definition?.level ?? 0;
             if (!byLevel.has(lvl)) byLevel.set(lvl, []);
             byLevel.get(lvl)!.push(spell);
+            if (spell.definition?.canCastAtHigherLevel && spell.definition.level != 0){
+                Array.from({length: maximumLevel! - spell.definition.level}, (_, i) => spell.definition!.level + i + 1).forEach(lvl => {
+                    if (!byLevel.has(lvl)) byLevel.set(lvl, []);
+                    byLevel.get(lvl)!.push({...spell, upcastLevel: lvl});
+                });
+            }
         }
 
         const durations: Record<string, (duration: {durationUnit: string, durationInterval: number}) => string> = {
@@ -74,12 +86,48 @@ spell_attack_bonus: ${spellAttackBonus >= 0 ? `+${spellAttackBonus}` : `${spellA
             undefined: () => `Unknown`,
             "None": () => `Unknown`,
         }
+        
+        const costs: Record<number, string> = {
+            1: 'Action',
+            3: 'Bonus Action',
+            4: 'Reaction',
+            8: 'Other'
+        }
 
         return [...byLevel.entries()].map(([lvl, spells]) => {
-            return `${spellTabNames[lvl]}:\n${spells.map(spell => `- name: "${this.character.linkName(spell.definition?.name, spell.definition?.description)}" 
+            return `${spellTabNames[lvl]}:\n${spells.map(spell => `- name: "${this.character.linkName(spell.definition?.name, spell.definition?.description)} ${spell.upcastLevel ? `(Upcast)` : ""}" 
   range: ${spell.definition?.range?.rangeValue ? `${spell.definition?.range?.rangeValue} ft` : spell.definition?.range?.origin}
-  duration: ${durations[spell.definition?.duration?.durationType ?? "None"](spell.definition?.duration!)}`).join("\n")}`
+  duration: ${durations[spell.definition?.duration?.durationType ?? "None"](spell.definition?.duration!)}
+  cost: ${costs[spell.definition?.activation?.activationType ?? 8]}
+  damage: ${this.getDamage(spell)}
+  type: ${this.getDamageType(spell)}
+`).join("")}`
         }).join('\n');
+    }
+    
+    private getDamage(spell: DdbSpell): string {
+
+        if (spell.upcastLevel){
+            const modifiers = spell.definition?.modifiers.filter(mod => mod.type == 'damage').map(mod => ({baseDice: mod.die, upcastDice: mod.atHigherLevels?.higherLevelDefinitions?.[0].dice}));
+            
+            const diceStrings = modifiers?.map(mod => {
+                const diceCount = mod.baseDice?.diceCount + (mod.upcastDice?.diceCount ?? 0) * (spell.upcastLevel! - spell.definition!.level);
+                return `${diceCount}d${mod.baseDice?.diceValue}`;
+            });
+            
+            return diceStrings?.join(' + ') ?? "";
+        }
+        
+        const diceStrings = spell.definition?.modifiers.filter(mod => mod.type == 'damage').map(mod => {
+            const atLevel = mod.atHigherLevels?.higherLevelDefinitions?.find(hl => hl.level != 1 && hl.level <= this.character.level)?.dice ?? mod.die;
+            return atLevel?.diceString;
+        }) ?? []
+        
+        return Array.from(new Set(diceStrings)).join(" + ") ?? "";
+    }
+    
+    private getDamageType(spell: DdbSpell): string {
+        return spell.definition?.modifiers.filter(mod => mod.type == 'damage').map(mod => mod.friendlySubtypeName).join(", ") ?? "";
     }
 
 }
