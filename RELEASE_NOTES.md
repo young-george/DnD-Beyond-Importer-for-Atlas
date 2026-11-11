@@ -1,5 +1,8 @@
 # Release Notes
 
+## v1.0.4
+- Rewrite HTML styling into Markdown, so that it can be shown properly in Atlas Online.
+
 ## v1.0.1
 - Add additional spellcasting details, including cost (action, bonus action, reaction), damage dice, damage type.
 - Add support for upcasting spells.

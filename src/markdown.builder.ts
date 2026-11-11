@@ -15,8 +15,12 @@ import FeaturesRenderer from "./renderers/features.renderer";
 import EquipmentRenderer from "./renderers/equipment.renderer";
 import CurrenciesRenderer from "./renderers/currencies.renderer";
 import NotesRenderer from "./renderers/notes.renderer";
+import TurndownService from 'turndown';
 
 export default class MarkdownBuilder {
+    
+    static turndownService = new TurndownService();
+  
     static buildMarkdown(
         data: DdbApiResponse,
         settings: Partial<DnDBeyondImporterSettings>,
@@ -58,15 +62,13 @@ ${settings.embedDndBeyond ? `<iframe class="dnd-frame" src="https://www.dndbeyon
 
 ${this.buildDetails(sheet)}
 `
+        md = md.replace(/\\\[/g, '[').replace(/\\\]/g, ']');
         md = md.replace(/{{modifier:([a-z]{3})(.*)}}/g, '@$1.mod');
         md = md.replace(/<p>/g, '\n').replace(/<\/p>/g, '\n\n');
         md = md.replace(/\[skill\](.*?)\[\/skill\]/g, '[$1](skills.md#$1)');
         md = md.replace(/\[wprop\](.*?)\[\/wprop\]/g, '[$1](item-properties.md#$1)');
         md = md.replace(/\[condition\](.*?)\[\/condition\]/g, '[$1](conditions.md#$1)');
         md = md.replace(/\[action\](.*?)\[\/action\]/g, '[$1](actions.md#$1)');
-        md = md.replace(/\[action\](.*?)\[\/action\]/g, '[$1](actions.md#$1)');
-        md = md.replace(/\[rules\](.*?)\[\/rules\]/g, '$1');
-        md = md.replace(/\[rules\](.*?)\[\/rules\]/g, '$1');
         md = md.replace(/\[rules\](.*?)\[\/rules\]/g, '$1');
 
         return md;
@@ -75,7 +77,7 @@ ${this.buildDetails(sheet)}
     static buildDetails(sheet: CharacterSheet): string {
         return sheet.linkedDescriptions
             ?.filter(d => d?.description && d?.description.trim() !== "")
-            ?.map(d => `### ${d?.name ?? ""}\n${d?.description}\n`).join('\n');
-    }
+            ?.map(d => `### ${d?.name ?? ""}\n${this.turndownService.turndown(d?.description ?? "")}\n`).join('\n');
 
+    }
 }
