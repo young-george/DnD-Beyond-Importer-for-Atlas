@@ -34,7 +34,7 @@ export default class ActionsRenderer extends AbstractRenderer {
             const dmgStr = a.damageDice
                 ? `${a.damageDice}${a.damageBonus !== 0 ? (a.damageBonus >= 0 ? `+${a.damageBonus}` : `${a.damageBonus}`) : ""}`
                 : (a.damageBonus !== 0 ? `${a.damageBonus}` : "");
-
+            
             const hitSave = a.save ? a.save : atkStr;
 
             return `- name: "${a.name}"\n  range: "${a.range}"\n  attack: "${hitSave}"\n  damage: "${dmgStr}"\n  type: "${a.damageType}"\n  desc: "${a.notes ?? ''} ${formatUses(a.uses)}"\n`;
@@ -196,21 +196,24 @@ export default class ActionsRenderer extends AbstractRenderer {
         
         const responses = this.getActionResponse();
         
-        for (const action of [...(this.character.raw.spells?.class ?? []), ...this.character.raw.spells?.feat ?? [], ...this.character.raw.classSpells?.flatMap(cs => cs.spells ?? []) ?? []]) {
+        for (const action of [...(this.character.raw.spells?.class ?? []), ...this.character.raw.spells?.feat ?? [], ...this.character.raw.classSpells?.flatMap(cs => cs.spells?.map(s => ({...s, characterClassId: cs.characterClassId})) ?? []) ?? []]) {
             
             if (!action.definition?.requiresAttackRoll || action.definition?.requiresSavingThrow || action.definition?.asPartOfWeaponAttack) {
                 if (action.activation?.activationType != 3) continue;
             }
             
-            const spellAttackBonus = action.spellCastingAbilityId ?
-                (this.character.getSpellcastingModifier(action.spellCastingAbilityId) +
+            const spellcastingAbilityId = action.spellCastingAbilityId ?? this.character.raw.classes?.find(c => c.id == action.characterClassId)?.definition?.spellCastingAbilityId;
+            
+            const spellAttackBonus = spellcastingAbilityId ?
+                (this.character.getSpellcastingModifier(spellcastingAbilityId) +
                 this.character.proficiencyBonus +
                 (this.character.allModifiers.find(mod => mod.type === "bonus" && mod.subType === "spell-attacks")?.value ?? 0))
                 : null;
-    
+            
             const spellSaveDc = 8 + this.character.proficiencyBonus + this.character.getSpellcastingModifier(action.spellCastingAbilityId) + (this.character.allModifiers.filter(mod => mod.type === "bonus" && mod.subType === "spell-save-dc")?.sum(m => m.value ?? 0) ?? 0);
             
             const damages = action.definition?.modifiers?.filter(mod => mod.type === "damage") ?? [];
+            const damageBonuses = this.character.allModifiers.filter(mod => mod.subType === "bonus-damage" && mod.friendlyTypeName === action.definition?.name)?.sum(m => (m.statId ? this.character.statsById[m.statId].mod : m.value) ?? 0) ?? 0;
             
             const builtAction = {
                 name: this.character.linkName(action.definition?.name, action.definition?.description),
@@ -218,10 +221,10 @@ export default class ActionsRenderer extends AbstractRenderer {
                 attackBonus: action.activation?.activationType === 1 ? spellAttackBonus : null,
                 save: action.definition?.saveDcAbilityId ? `DC${spellSaveDc} ${statKeys[action.definition?.saveDcAbilityId - 1]?.label}` : undefined,
                 spellSaveDc,
-                damageDice: damages.map(d => `${d.die.diceString?.replace(' + ', '+')} ${d.friendlySubtypeName}`).join(" + ") || null,
-                damageBonus: 0,
+                damageDice: damages.map(d => d.die.diceString?.replace(' + ', '+')).join(" + ") || null,
+                damageBonus: damageBonuses,
                 range: action.range?.rangeValue ? `${action.range?.rangeValue} ft` : (action.range?.origin ?? ''),
-                damageType: '',
+                damageType: damages.map(d => d.friendlySubtypeName).join(", ") || null,
                 notes: ``,
                 isSpell: true,
                 uses: this.getUses(action),
