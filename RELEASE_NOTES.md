@@ -1,5 +1,8 @@
 # Release Notes
 
+## 1.0.6
+- Improve error handling when checking for the 5e character sheet template.
+
 ## 1.0.5
 - Fix issue with spellcasting costs.
 

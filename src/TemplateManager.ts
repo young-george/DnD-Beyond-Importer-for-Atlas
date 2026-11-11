@@ -19,8 +19,12 @@ export default class TemplateManager {
         const templateContents = await Promise.all(templates?.map((file) => app.vault.read(file)) ?? []);
         
         const templateExists = templateContents.some((content) => {
-            const templateJson: {id: string}  = JSON.parse(content) as {id: string};
-            return templateJson.id == template.id;
+            try {
+                const templateJson: { id: string } = JSON.parse(content) as { id: string };
+                return templateJson.id == template.id;
+            } catch (e) {
+                return false;
+            }
         });
         
         if (!templateExists) {
