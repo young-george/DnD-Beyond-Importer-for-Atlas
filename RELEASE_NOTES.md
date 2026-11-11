@@ -1,5 +1,8 @@
 # Release Notes
 
+## 1.0.5
+- Fix issue with spellcasting costs.
+
 ## v1.0.4
 - Rewrite HTML styling into Markdown, so that it can be shown properly in Atlas Online.
 

@@ -1,9 +1,9 @@
 ---
 cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
-atlas-template: "5e-2024-character-sheet-pips-4r8tqz"
+atlas-template: "5e-2024-character-sheet-4r8tqz"
 statblock: true
-importer_version: 1.0.1
+importer_version: 1.0.5
 dndbeyond_id: 166044682
 name: Rolf
 species: "Human"
@@ -226,25 +226,25 @@ tab_2:
 - name: "Bless " 
   range: 30 ft
   duration: Concentration, up to 1 minute
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Cure Wounds " 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Guiding Bolt " 
   range: 120 ft
   duration: Up to 1 round
-  cost: Action
+  cost: "Action"
   damage: 4d6
   type: Radiant
 - name: "Shield of Faith " 
   range: 60 ft
   duration: Concentration, up to 10 minutes
-  cost: Bonus Action
+  cost: "Bonus Action"
   damage: 
   type: 
 
@@ -252,19 +252,19 @@ tab_3:
 - name: "Bless (Upcast)" 
   range: 30 ft
   duration: Concentration, up to 1 minute
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Guiding Bolt (Upcast)" 
   range: 120 ft
   duration: Up to 1 round
-  cost: Action
+  cost: "Action"
   damage: 5d6
   type: Radiant
 
@@ -272,19 +272,19 @@ tab_4:
 - name: "Bless (Upcast)" 
   range: 30 ft
   duration: Concentration, up to 1 minute
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Guiding Bolt (Upcast)" 
   range: 120 ft
   duration: Up to 1 round
-  cost: Action
+  cost: "Action"
   damage: 6d6
   type: Radiant
 
@@ -292,19 +292,19 @@ tab_5:
 - name: "Bless (Upcast)" 
   range: 30 ft
   duration: Concentration, up to 1 minute
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Guiding Bolt (Upcast)" 
   range: 120 ft
   duration: Up to 1 round
-  cost: Action
+  cost: "Action"
   damage: 7d6
   type: Radiant
 
@@ -312,19 +312,19 @@ tab_6:
 - name: "Bless (Upcast)" 
   range: 30 ft
   duration: Concentration, up to 1 minute
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Guiding Bolt (Upcast)" 
   range: 120 ft
   duration: Up to 1 round
-  cost: Action
+  cost: "Action"
   damage: 8d6
   type: Radiant
 
@@ -332,19 +332,19 @@ tab_7:
 - name: "Bless (Upcast)" 
   range: 30 ft
   duration: Concentration, up to 1 minute
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Guiding Bolt (Upcast)" 
   range: 120 ft
   duration: Up to 1 round
-  cost: Action
+  cost: "Action"
   damage: 9d6
   type: Radiant
 
@@ -352,19 +352,19 @@ tab_8:
 - name: "Bless (Upcast)" 
   range: 30 ft
   duration: Concentration, up to 1 minute
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Guiding Bolt (Upcast)" 
   range: 120 ft
   duration: Up to 1 round
-  cost: Action
+  cost: "Action"
   damage: 10d6
   type: Radiant
 
@@ -372,19 +372,19 @@ tab_9:
 - name: "Bless (Upcast)" 
   range: 30 ft
   duration: Concentration, up to 1 minute
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Guiding Bolt (Upcast)" 
   range: 120 ft
   duration: Up to 1 round
-  cost: Action
+  cost: "Action"
   damage: 11d6
   type: Radiant
 
@@ -392,19 +392,19 @@ tab_10:
 - name: "Bless (Upcast)" 
   range: 30 ft
   duration: Concentration, up to 1 minute
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Guiding Bolt (Upcast)" 
   range: 120 ft
   duration: Up to 1 round
-  cost: Action
+  cost: "Action"
   damage: 12d6
   type: Radiant
 
@@ -412,19 +412,19 @@ spellcasting:
 - name: "Guidance " 
   range: Touch
   duration: Concentration, up to 1 minute
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Toll the Dead " 
   range: 60 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 2d8
   type: Necrotic
 - name: "Word of Radiance " 
   range: Self
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 2d6
   type: Radiant
 class_features:

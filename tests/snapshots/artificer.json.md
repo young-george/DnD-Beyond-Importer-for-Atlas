@@ -1,9 +1,9 @@
 ---
 cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
-atlas-template: "5e-2024-character-sheet-pips-4r8tqz"
+atlas-template: "5e-2024-character-sheet-4r8tqz"
 statblock: true
-importer_version: 1.0.1
+importer_version: 1.0.5
 dndbeyond_id: 164733102
 name: A.E.G.I.S.
 species: "Warforged"
@@ -188,43 +188,43 @@ tab_2:
 - name: "Cure Wounds " 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Detect Magic " 
   range: Self
   duration: Concentration, up to 10 minutes
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Disguise Self " 
   range: Self
   duration: Up to 1 hour
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Find Familiar " 
   range: 10 ft
   duration: Instantaneous
-  cost: Time: 1 hour
+  cost: "Time: 1 hour"
   damage: 
   type: 
 - name: "Identify " 
   range: Touch
   duration: Instantaneous
-  cost: Time: 1 minute
+  cost: "Time: 1 minute"
   damage: 
   type: 
 - name: "Magic Missile " 
   range: 120 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 1d4 + 1
   type: Force
 - name: "Thunderwave " 
   range: Self
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 2d8
   type: Thunder
 
@@ -232,43 +232,43 @@ tab_3:
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Dragon's Breath " 
   range: Touch
   duration: Concentration, up to 1 minute
-  cost: Bonus Action
+  cost: "Bonus Action"
   damage: 3d6
   type: Acid, Cold, Fire, Lightning, Poison
 - name: "Magic Missile (Upcast)" 
   range: 120 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 1d4
   type: Force
 - name: "Mirror Image " 
   range: Self
   duration: Up to 1 minute
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Shatter " 
   range: 60 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 3d8
   type: Thunder
 - name: "Thunderwave (Upcast)" 
   range: Self
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 3d8
   type: Thunder
 - name: "Vortex Warp " 
   range: 90 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 
@@ -276,37 +276,37 @@ tab_4:
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Dragon's Breath (Upcast)" 
   range: Touch
   duration: Concentration, up to 1 minute
-  cost: Bonus Action
+  cost: "Bonus Action"
   damage: 4d6 + 4d6 + 4d6 + 4d6 + 4d6
   type: Acid, Cold, Fire, Lightning, Poison
 - name: "Magic Missile (Upcast)" 
   range: 120 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 1d4
   type: Force
 - name: "Shatter (Upcast)" 
   range: 60 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 4d8
   type: Thunder
 - name: "Thunderwave (Upcast)" 
   range: Self
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 4d8
   type: Thunder
 - name: "Vortex Warp (Upcast)" 
   range: 90 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 
@@ -314,37 +314,37 @@ tab_5:
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Dragon's Breath (Upcast)" 
   range: Touch
   duration: Concentration, up to 1 minute
-  cost: Bonus Action
+  cost: "Bonus Action"
   damage: 5d6 + 5d6 + 5d6 + 5d6 + 5d6
   type: Acid, Cold, Fire, Lightning, Poison
 - name: "Magic Missile (Upcast)" 
   range: 120 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 1d4
   type: Force
 - name: "Shatter (Upcast)" 
   range: 60 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 5d8
   type: Thunder
 - name: "Thunderwave (Upcast)" 
   range: Self
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 5d8
   type: Thunder
 - name: "Vortex Warp (Upcast)" 
   range: 90 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 
@@ -352,37 +352,37 @@ tab_6:
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Dragon's Breath (Upcast)" 
   range: Touch
   duration: Concentration, up to 1 minute
-  cost: Bonus Action
+  cost: "Bonus Action"
   damage: 6d6 + 6d6 + 6d6 + 6d6 + 6d6
   type: Acid, Cold, Fire, Lightning, Poison
 - name: "Magic Missile (Upcast)" 
   range: 120 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 1d4
   type: Force
 - name: "Shatter (Upcast)" 
   range: 60 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 6d8
   type: Thunder
 - name: "Thunderwave (Upcast)" 
   range: Self
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 6d8
   type: Thunder
 - name: "Vortex Warp (Upcast)" 
   range: 90 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 
@@ -390,37 +390,37 @@ tab_7:
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Dragon's Breath (Upcast)" 
   range: Touch
   duration: Concentration, up to 1 minute
-  cost: Bonus Action
+  cost: "Bonus Action"
   damage: 7d6 + 7d6 + 7d6 + 7d6 + 7d6
   type: Acid, Cold, Fire, Lightning, Poison
 - name: "Magic Missile (Upcast)" 
   range: 120 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 1d4
   type: Force
 - name: "Shatter (Upcast)" 
   range: 60 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 7d8
   type: Thunder
 - name: "Thunderwave (Upcast)" 
   range: Self
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 7d8
   type: Thunder
 - name: "Vortex Warp (Upcast)" 
   range: 90 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 
@@ -428,37 +428,37 @@ tab_8:
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Dragon's Breath (Upcast)" 
   range: Touch
   duration: Concentration, up to 1 minute
-  cost: Bonus Action
+  cost: "Bonus Action"
   damage: 8d6 + 8d6 + 8d6 + 8d6 + 8d6
   type: Acid, Cold, Fire, Lightning, Poison
 - name: "Magic Missile (Upcast)" 
   range: 120 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 1d4
   type: Force
 - name: "Shatter (Upcast)" 
   range: 60 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 8d8
   type: Thunder
 - name: "Thunderwave (Upcast)" 
   range: Self
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 8d8
   type: Thunder
 - name: "Vortex Warp (Upcast)" 
   range: 90 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 
@@ -466,37 +466,37 @@ tab_9:
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Dragon's Breath (Upcast)" 
   range: Touch
   duration: Concentration, up to 1 minute
-  cost: Bonus Action
+  cost: "Bonus Action"
   damage: 9d6 + 9d6 + 9d6 + 9d6 + 9d6
   type: Acid, Cold, Fire, Lightning, Poison
 - name: "Magic Missile (Upcast)" 
   range: 120 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 1d4
   type: Force
 - name: "Shatter (Upcast)" 
   range: 60 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 9d8
   type: Thunder
 - name: "Thunderwave (Upcast)" 
   range: Self
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 9d8
   type: Thunder
 - name: "Vortex Warp (Upcast)" 
   range: 90 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 
@@ -504,37 +504,37 @@ tab_10:
 - name: "Cure Wounds (Upcast)" 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Dragon's Breath (Upcast)" 
   range: Touch
   duration: Concentration, up to 1 minute
-  cost: Bonus Action
+  cost: "Bonus Action"
   damage: 10d6 + 10d6 + 10d6 + 10d6 + 10d6
   type: Acid, Cold, Fire, Lightning, Poison
 - name: "Magic Missile (Upcast)" 
   range: 120 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 1d4
   type: Force
 - name: "Shatter (Upcast)" 
   range: 60 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 10d8
   type: Thunder
 - name: "Thunderwave (Upcast)" 
   range: Self
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 10d8
   type: Thunder
 - name: "Vortex Warp (Upcast)" 
   range: 90 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 
@@ -542,31 +542,31 @@ spellcasting:
 - name: "Fire Bolt " 
   range: 120 ft
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 2d10
   type: Fire
 - name: "Light " 
   range: Touch
   duration: Up to 1 hour
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Mending " 
   range: Touch
   duration: Instantaneous
-  cost: Time: 1 minute
+  cost: "Time: 1 minute"
   damage: 
   type: 
 - name: "Prestidigitation " 
   range: 10 ft
   duration: Up to 1 hour
-  cost: Action
+  cost: "Action"
   damage: 
   type: 
 - name: "Shocking Grasp " 
   range: Touch
   duration: Instantaneous
-  cost: Action
+  cost: "Action"
   damage: 2d8
   type: Lightning
 class_features:

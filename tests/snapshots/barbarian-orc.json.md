@@ -1,9 +1,9 @@
 ---
 cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
-atlas-template: "5e-2024-character-sheet-pips-4r8tqz"
+atlas-template: "5e-2024-character-sheet-4r8tqz"
 statblock: true
-importer_version: 1.0.1
+importer_version: 1.0.5
 dndbeyond_id: 164732427
 name: Ak'tar
 species: "Orc"
