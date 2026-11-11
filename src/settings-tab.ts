@@ -76,6 +76,20 @@ export default class DnDBeyondSettingTab extends PluginSettingTab {
                 }
             },
             {
+                name: "Automatically create Atlas player token",
+                desc: "Automatically register created statblocks as Atlas player tokens.",
+                render: (setting: Setting) => {
+                    setting.addToggle((toggle) =>
+                        toggle
+                            .setValue(this.plugin.pluginSettings.autoCreateAtlasToken ?? true)
+                            .onChange((value) => {
+                                this.plugin.pluginSettings.autoCreateAtlasToken = value;
+                                void this.plugin.saveSettings();
+                            })
+                    );
+                }
+            },
+            {
                 type: 'group',
                 heading: 'Automatically Sync...',
                 items: [

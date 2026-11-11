@@ -123,6 +123,7 @@ export interface DdbClassSpell {
 }
 
 export interface DdbInventoryItem {
+    id: number;
     grantedModifiers: DdbModifier[];
     definition?: DdbDefinition;
     equipped?: boolean;
@@ -286,6 +287,7 @@ export interface DdbApiResponse {
 }
 
 export interface DnDBeyondImporterSettings {
+    autoCreateAtlasToken: boolean;
     importSkillValues: boolean;
     imageOutputFolder: string;
     includeDescriptions: boolean;
@@ -303,6 +305,7 @@ export const DEFAULT_SETTINGS: DnDBeyondImporterSettings = {
     importOnStartup: true,
     importWhenOpening: true,
     embedDndBeyond: true,
+    autoCreateAtlasToken: true,
 };
 
 // Advantage/disadvantage on a saving throw or skill check. Checks both the

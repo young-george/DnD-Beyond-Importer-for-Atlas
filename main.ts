@@ -12,6 +12,7 @@ import ImportModal from "./src/import-modal";
 import MarkdownBuilder from "./src/markdown.builder";
 import 'src/array-extensions';
 import TemplateManager from "./src/TemplateManager";
+import AtlasRegistrator from "./src/AtlasRegistrator";
 
 declare global {
 	interface Array<T> {
@@ -236,6 +237,8 @@ export default class DnDBeyondImporterPlugin extends Plugin {
 		const safeName = (char.name ?? `Character ${id}`).replace(/[\\/:*?"<>|]/g, "-").trim();
 		const defaultPath = normalizePath(`${folder}/${safeName}.md`);
 		let imagePath = folder;
+		
+		let targetPath = defaultPath;
 
 		try {
 			if (existing) {
@@ -243,7 +246,6 @@ export default class DnDBeyondImporterPlugin extends Plugin {
 				await this.app.vault.modify(existing, markdown);
 				
 			} else {
-				let targetPath = defaultPath;
 				let suffix = 2;
 				while (this.app.vault.getAbstractFileByPath(targetPath)) {
 					targetPath = normalizePath(`${folder}/${safeName} (${suffix}).md`);
@@ -286,6 +288,11 @@ export default class DnDBeyondImporterPlugin extends Plugin {
 			}
 		}
 
+		if (this.pluginSettings.autoCreateAtlasToken){
+			await AtlasRegistrator.registerTokenWithAtlas(this.app, char, targetPath, `${imageDirectory}/${char.name ?? "character"}_${char.id}.jpg`);
+			await AtlasRegistrator.registerInventoryWithAtlas(this.app, char);
+		}
+		
 		new Notice(`✅ Imported ${char.name ?? "character"}.`, 3000);
 	}
 }
