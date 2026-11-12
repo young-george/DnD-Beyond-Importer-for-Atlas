@@ -234,6 +234,10 @@ export interface DdbCharacter {
     height: string;
     age: number;
     customProficiencies: {
+        miscBonus?: number;
+        magicBonus?: number;
+        statId: number;
+        override: boolean;
         name: string;
         proficiencyLevel: number;
     }[];

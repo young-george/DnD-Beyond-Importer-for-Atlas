@@ -85,6 +85,7 @@ spell_attack_bonus: ${spellAttackBonus >= 0 ? `+${spellAttackBonus}` : `${spellA
             "Concentration": ({durationUnit, durationInterval}) => `Concentration, up to ${durationInterval} ${durationUnit.toLowerCase()}${durationInterval > 1 ? 's' : ''}`,
             undefined: () => `Unknown`,
             "None": () => `Unknown`,
+            "Until Dispelled": () => `Until Dispelled`,
         }
         
         const costs: Record<number, string> = {
