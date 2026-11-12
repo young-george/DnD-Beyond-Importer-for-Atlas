@@ -1,9 +1,9 @@
 Array.prototype.sum = function <T>(
     this: T[],
-    predicate?: (value: T) => number
+    predicate?: (value: T) => number | undefined
 ): number {
     if (predicate) {
-        return this.reduce((acc, item) => acc + predicate(item), 0);
+        return this.reduce((acc, item) => acc + (predicate(item) ?? 0), 0);
     }
     return (this as unknown as number[]).reduce((acc, item) => acc + item, 0);
 };

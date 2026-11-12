@@ -16,9 +16,11 @@ export default class Utilities {
     }
 
     static formatAdvMarkerMd(advState: AdvState): string {
-        if (advState === "advantage") return ` <span style=\\"color:#22c55e;font-weight:700;\\">▲A</span>`;
-        if (advState === "disadvantage") return ` <span style=\\"color:#ef4444;font-weight:700;\\">▼D</span>`;
-        return ``;
+        return {
+            "advantage": "▲A",
+            "disadvantage": "▼D",
+            "none": ""
+        }[advState];
     }
     
     static getOrdinal(n: number): string {
@@ -39,5 +41,4 @@ export default class Utilities {
 
         return ord;
     }
-
 }

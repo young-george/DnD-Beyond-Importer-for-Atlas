@@ -22,9 +22,10 @@ export default class ActionsRenderer extends AbstractRenderer {
 
         const actionsObj = this.extractActions();
         
-        function formatUses(uses: {used: number, maximum: number} | undefined): string {
+        function formatUses(uses: { reset: string; used: number, maximum: number} | undefined): string {
             if (!uses) return "";
-            return Array.from({ length: uses.maximum }, (_, index) => `<input class='action-use' type='checkbox' ${index < uses.used ? 'checked':''}/>`).join("");
+            const checkboxes = Array.from({ length: uses.maximum }, (_, index) => `<input class='action-use' type='checkbox' ${index < uses.used ? 'checked':''}/>`).join("");
+            return `Uses: ${checkboxes}/ ${uses.reset}`;
         }
         
         function formatAttackDetails(a: CharacterAction): string {
@@ -296,7 +297,7 @@ export default class ActionsRenderer extends AbstractRenderer {
         }
         const maximum = action.limitedUse.statModifierUsesId ? this.character.statsById[action.limitedUse.statModifierUsesId]?.mod : action.limitedUse.maxUses;
         
-        return {used: action.limitedUse.numberUsed, maximum}
+        return {used: action.limitedUse.numberUsed, maximum, reset: [null, "short rest", "long rest", "day"][action.limitedUse.resetType ?? 0] ?? null};
     }
     
     private getActionResponse() {

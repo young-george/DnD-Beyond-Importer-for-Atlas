@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-4r8tqz"
 statblock: true
-importer_version: 1.0.5
+importer_version: 1.0.7
 dndbeyond_id: 164733102
 name: A.E.G.I.S.
 species: "Warforged"
@@ -99,14 +99,14 @@ actions:
 - name: "Fire Bolt"
   range: "120 ft"
   attack: "+8"
-  damage: "1d10 Fire"
-  type: ""
+  damage: "1d10"
+  type: "Fire"
   desc: " "
 - name: "Shocking Grasp"
   range: "Touch"
   attack: "+8"
-  damage: "1d8 Lightning"
-  type: ""
+  damage: "1d8"
+  type: "Lightning"
   desc: " "
 - name: "Create Arcane Armor"
   range: ""
@@ -576,11 +576,16 @@ class_features:
 - name: "Replicate Magic Item"
 - name: "Artificer Subclass"
 - name: "Magic Item Plans"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Manifold Tool"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Alchemy Jug"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Bag of Holding"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Wand of the War Mage, +1"
 - name: "Ability Score Improvement"
 - name: "Tools of the Trade"
 - name: "Armorer Spells"
 - name: "Arcane Armor"
 - name: "Armor Model"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Guardian"
 - name: "Extra Attack"
 
 species_traits:
@@ -640,7 +645,8 @@ skin:
 hair: 
 personality: |-
   "
-allies: 
+allies: |-
+  
 appearance:
 ---
 

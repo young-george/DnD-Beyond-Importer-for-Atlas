@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-4r8tqz"
 statblock: true
-importer_version: 1.0.5
+importer_version: 1.0.7
 dndbeyond_id: 16051611
 name: Highflow Chugspout the 2nd
 species: "Skeleton"
@@ -103,9 +103,9 @@ actions:
   desc: " "
 - name: "Guiding Bolt"
   range: "120 ft"
-  attack: ""
-  damage: "4d6 Radiant"
-  type: ""
+  attack: "+6"
+  damage: "4d6"
+  type: "Radiant"
   desc: " "
 - name: "Channel Divinity: Preserve Life"
   range: ""
@@ -511,7 +511,8 @@ skin: No
 hair: 
 personality: |-
   "
-allies: 
+allies: |-
+  
 appearance:
 ---
 

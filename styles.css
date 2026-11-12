@@ -74,13 +74,6 @@
 	z-index: 9;
 }
 
-.atlas-sb-trait:has(.action-use) {
-	.atlas-sb-trait-name {
-		margin-right: .6rem !important;
-	}
-	display: flex;
-	align-items: center;
-	span:not(.atlas-sb-trait-name) {
-		display: contents;
-	}
+.action-use {
+	vertical-align: sub;
 }

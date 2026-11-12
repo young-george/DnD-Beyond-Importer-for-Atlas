@@ -7,11 +7,14 @@ export default class CharacterSheet {
     level = this.raw.classes?.reduce((sum, c) => sum + (c.level ?? 0), 0) ?? 0
     
     get allModifiers(): DdbModifier[] {
+        
         const isMultiClass = (this.raw.classes?.length ?? 0) > 1;
-
+        const hasBackground = this.raw.background?.definition?.id != null;
+        const raceStatIncreasesId = this.raw.options?.race.find(o => o.componentTypeId === 1960452172)?.definition?.entityTypeId;
+        
         return [
             ...(this.raw.modifiers?.class ?? []),
-            ...(this.raw.modifiers?.race ?? []),
+            ...(this.raw.modifiers?.race?.filter(m => !(hasBackground && m.componentTypeId === raceStatIncreasesId)) ?? []),
             ...(this.raw.modifiers?.background ?? []),
             ...(this.raw.modifiers?.feat ?? []),
             ...(this.raw.modifiers?.item ?? []),
@@ -22,6 +25,7 @@ export default class CharacterSheet {
             }
             return true;
         })
+            
     }
     
     get proficiencyBonus(): number {
@@ -80,8 +84,8 @@ export default class CharacterSheet {
         return { score, mod };
     }
     
-    findModifiers(type: string, subType?: string): DdbModifier[] {
-        return this.allModifiers.filter((m) => m.type === type && (subType == null || m.subType === subType));
+    findModifiers(type: string, subType?: string | string[]): DdbModifier[] {
+        return this.allModifiers.filter((m) => m.type === type && (subType == null || m.subType === subType || (Array.isArray(subType) && subType.includes(m.subType ?? ''))));
     }
     
     computeStats(char: DdbCharacter): Stats {

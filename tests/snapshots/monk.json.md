@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-4r8tqz"
 statblock: true
-importer_version: 1.0.5
+importer_version: 1.0.7
 dndbeyond_id: 173042556
 name: Monk
 species: "Human"
@@ -278,7 +278,8 @@ skin:
 hair: 
 personality: |-
   "
-allies: 
+allies: |-
+  
 appearance:
 ---
 

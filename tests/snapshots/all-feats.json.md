@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-4r8tqz"
 statblock: true
-importer_version: 1.0.5
+importer_version: 1.0.7
 dndbeyond_id: 171620138
 name: All feats
 species: "Human"
@@ -114,26 +114,26 @@ actions:
 - name: "Chromatic Orb"
   range: "90 ft"
   attack: "+2"
-  damage: "3d8 Acid + 3d8 Cold + 3d8 Fire + 3d8 Lightning + 3d8 Poison + 3d8 Thunder"
-  type: ""
+  damage: "3d8 + 3d8 + 3d8 + 3d8 + 3d8 + 3d8"
+  type: "Acid, Cold, Fire, Lightning, Poison, Thunder"
   desc: " <input class='action-use' type='checkbox' />"
 - name: "Fire Bolt"
   range: "120 ft"
   attack: "+2"
-  damage: "1d10 Fire"
-  type: ""
+  damage: "1d10"
+  type: "Fire"
   desc: " "
 - name: "Poison Spray"
   range: "30 ft"
   attack: "+2"
-  damage: "1d12 Poison"
-  type: ""
+  damage: "1d12"
+  type: "Poison"
   desc: " "
 - name: "Starry Wisp"
   range: "60 ft"
   attack: "+2"
-  damage: "1d8 Radiant"
-  type: ""
+  damage: "1d8"
+  type: "Radiant"
   desc: " "
 - name: "Battle Medic"
   range: ""
@@ -796,7 +796,8 @@ skin:
 hair: 
 personality: |-
   "
-allies: 
+allies: |-
+  
 appearance:
 ---
 

@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-4r8tqz"
 statblock: true
-importer_version: 1.0.5
+importer_version: 1.0.7
 dndbeyond_id: 168818959
 name: Soveliss
 species: "Human"
@@ -97,15 +97,15 @@ actions:
   desc: " "
 - name: "Eldritch Blast"
   range: "120 ft"
-  attack: ""
-  damage: "1d10 Force"
-  type: ""
+  attack: "+7"
+  damage: "1d10+4"
+  type: "Force"
   desc: " "
 - name: "Primal Savagery"
   range: "Self"
   attack: ""
-  damage: "1d10 Acid"
-  type: ""
+  damage: "1d10"
+  type: "Acid"
   desc: " "
 bonus_actions:
 - name: "Spells"
@@ -777,6 +777,11 @@ spellcasting:
 class_features:
 - name: "Core Warlock Traits"
 - name: "Eldritch Invocations"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Agonizing Blast (Eldritch Blast)"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Repelling Blast"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Gaze of Two Minds"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Misty Visions"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Otherworldly Leap"
 - name: "Pact Magic"
 - name: "Magical Cunning"
 - name: "Warlock Subclass"
@@ -857,7 +862,8 @@ skin:
 hair: 
 personality: |-
   "
-allies: 
+allies: |-
+  
 appearance:
 ---
 

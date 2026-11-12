@@ -15,7 +15,7 @@ import TemplateManager from "./src/TemplateManager";
 
 declare global {
 	interface Array<T> {
-		sum(predicate?: (value: T) => number): number;
+		sum(predicate?: (value: T) => number | undefined): number;
 		deduplicate(predicate: (value: T) => unknown): T[];
 	}
 }

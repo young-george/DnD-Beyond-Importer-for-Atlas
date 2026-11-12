@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-4r8tqz"
 statblock: true
-importer_version: 1.0.5
+importer_version: 1.0.7
 dndbeyond_id: 166044682
 name: Rolf
 species: "Human"
@@ -102,9 +102,9 @@ actions:
   desc: " "
 - name: "Guiding Bolt"
   range: "120 ft"
-  attack: ""
-  damage: "4d6 Radiant"
-  type: ""
+  attack: "+5"
+  damage: "4d6"
+  type: "Radiant"
   desc: " "
 - name: "Channel Divinity"
   range: ""
@@ -431,6 +431,7 @@ class_features:
 - name: "Core Cleric Traits"
 - name: "Spellcasting"
 - name: "Divine Order"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Protector"
 - name: "Channel Divinity"
 - name: "Cleric Subclass"
 - name: "Guided Strike"
@@ -486,7 +487,8 @@ skin:
 hair: 
 personality: |-
   "
-allies: 
+allies: |-
+  
 appearance:
 ---
 

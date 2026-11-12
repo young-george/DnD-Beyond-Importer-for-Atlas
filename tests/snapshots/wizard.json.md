@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-4r8tqz"
 statblock: true
-importer_version: 1.0.5
+importer_version: 1.0.7
 dndbeyond_id: 168673586
 name: Therai
 species: "Tiefling"
@@ -97,21 +97,21 @@ actions:
   desc: " "
 - name: "Scorching Ray"
   range: "120 ft"
-  attack: ""
-  damage: "2d6 Fire"
-  type: ""
+  attack: "+8"
+  damage: "2d6"
+  type: "Fire"
   desc: " "
 - name: "Vampiric Touch"
   range: "Self"
-  attack: ""
-  damage: "3d6 Necrotic"
-  type: ""
+  attack: "+8"
+  damage: "3d6"
+  type: "Necrotic"
   desc: " "
 - name: "Witch Bolt"
   range: "60 ft"
-  attack: ""
-  damage: "2d12 Lightning + 1d12 Lightning"
-  type: ""
+  attack: "+8"
+  damage: "2d12 + 1d12"
+  type: "Lightning, Lightning"
   desc: " "
 bonus_actions:
 - name: "Spells"
@@ -1378,7 +1378,8 @@ skin:
 hair: 
 personality: |-
   "
-allies: 
+allies: |-
+  
 appearance:
 ---
 

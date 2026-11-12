@@ -37,7 +37,8 @@ skin: ${this.character.raw.skin ?? ""}
 hair: ${this.character.raw.hair ?? ""}
 personality: |-
   ${(this.character.raw.traits?.personalityTraits ?? "").replace(/\n/g, "\n  ")}"
-allies: ${[this.character.raw.notes?.allies, this.character.raw.notes?.organizations].filter(Boolean).join(', ')}
+allies: |-
+  ${[this.character.raw.notes?.allies, this.character.raw.notes?.organizations].filter(Boolean).join(', ').replace(/\n/g, "\n  ")}
 appearance: ${this.character.raw.traits?.appearance ?? ""}
 `;
     }

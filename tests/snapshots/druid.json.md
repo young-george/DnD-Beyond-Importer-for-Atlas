@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-4r8tqz"
 statblock: true
-importer_version: 1.0.5
+importer_version: 1.0.7
 dndbeyond_id: 163437390
 name: Finrod Dewstar
 species: "Elf"
@@ -32,7 +32,7 @@ hit_dice_pool:
     used: 0
 initiative: "+1"
 ac: 17
-speed: 30
+speed: 35
 stats:
   - 13
   - 12
@@ -105,26 +105,26 @@ actions:
 - name: "Chromatic Orb"
   range: "90 ft"
   attack: "+7"
-  damage: "3d8 Acid + 3d8 Cold + 3d8 Fire + 3d8 Lightning + 3d8 Poison + 3d8 Thunder"
-  type: ""
+  damage: "3d8 + 3d8 + 3d8 + 3d8 + 3d8 + 3d8"
+  type: "Acid, Cold, Fire, Lightning, Poison, Thunder"
   desc: " <input class='action-use' type='checkbox' />"
 - name: "Guiding Bolt"
   range: "120 ft"
   attack: ""
-  damage: "4d6 Radiant"
-  type: ""
+  damage: "4d6"
+  type: "Radiant"
   desc: " "
 - name: "Guiding Bolt"
   range: "120 ft"
   attack: ""
-  damage: "4d6 Radiant"
-  type: ""
+  damage: "4d6"
+  type: "Radiant"
   desc: " <input class='action-use' type='checkbox' /><input class='action-use' type='checkbox' /><input class='action-use' type='checkbox' /><input class='action-use' type='checkbox' />"
 - name: "Starry Wisp"
   range: "60 ft"
-  attack: ""
-  damage: "1d8 Radiant"
-  type: ""
+  attack: "+7"
+  damage: "1d8"
+  type: "Radiant"
   desc: " "
 - name: "Healing Word"
   range: "60 ft"
@@ -948,6 +948,7 @@ class_features:
 - name: "Spellcasting"
 - name: "Druidic"
 - name: "Primal Order"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Warden"
 - name: "Wild Shape"
 - name: "Wild Companion"
 - name: "Druid Subclass"
@@ -955,6 +956,7 @@ class_features:
 - name: "Wild Resurgence"
 - name: "Star Map"
 - name: "Starry Form"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Archer"
 
 species_traits:
 - name: "Ability Score Increases"
@@ -1032,11 +1034,12 @@ skin:
 hair: 
 personality: |-
   "
-allies: 🌿 Lethariel Mosswhisper — Former Druidic Mentor
-An elder wood elf druid who once oversaw Finrod’s early training.
-Past relationship: Taught him basic woodland rites, but was openly uneasy about his fascination with stars and “distant forces.”
-View of him: Concerned, but not hostile. Thought he was being led astray.
-Now: Might be quietly curious if his journey gave him real wisdom—or quietly defensive if his beliefs challenge Oakrest orthodoxy.
+allies: |-
+  🌿 Lethariel Mosswhisper — Former Druidic Mentor
+  An elder wood elf druid who once oversaw Finrod’s early training.
+  Past relationship: Taught him basic woodland rites, but was openly uneasy about his fascination with stars and “distant forces.”
+  View of him: Concerned, but not hostile. Thought he was being led astray.
+  Now: Might be quietly curious if his journey gave him real wisdom—or quietly defensive if his beliefs challenge Oakrest orthodoxy.
 appearance:
 ---
 

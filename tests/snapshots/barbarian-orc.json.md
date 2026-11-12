@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-4r8tqz"
 statblock: true
-importer_version: 1.0.5
+importer_version: 1.0.7
 dndbeyond_id: 164732427
 name: Ak'tar
 species: "Orc"
@@ -166,12 +166,14 @@ otheractions:
 class_features:
 - name: "Core Barbarian Traits"
 - name: "Rage"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Activate Rage"
 - name: "Unarmored Defense"
 - name: "Weapon Mastery"
 - name: "Danger Sense"
 - name: "Reckless Attack"
 - name: "Barbarian Subclass"
 - name: "Primal Knowledge"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Rage: Primal Knowledge"
 - name: "Ability Score Improvement"
 - name: "4: Weapon Mastery"
 - name: "Extra Attack"
@@ -223,7 +225,8 @@ skin:
 hair: 
 personality: |-
   "
-allies: 
+allies: |-
+  
 appearance:
 ---
 

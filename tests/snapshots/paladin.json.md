@@ -3,7 +3,7 @@ cssClasses: ["dnd-beyond-imported-character"]
 obsidianUIMode: preview
 atlas-template: "5e-2024-character-sheet-4r8tqz"
 statblock: true
-importer_version: 1.0.5
+importer_version: 1.0.7
 dndbeyond_id: 168838522
 name: Raya
 species: "Human"
@@ -657,6 +657,7 @@ class_features:
 - name: "Spellcasting"
 - name: "Weapon Mastery"
 - name: "Fighting Style"
+- name: "&nbsp;&nbsp;&nbsp;&nbsp;Blessed Warrior"
 - name: "Paladin’s Smite"
 - name: "Channel Divinity"
 - name: "Paladin Subclass"
@@ -730,7 +731,8 @@ hair:
 personality: |-
   I'm always down to help someone fix something that is broken, I love making things work again.
   I love to share what I find with others and help where I can."
-allies: 
+allies: |-
+  
 appearance:
 ---
 

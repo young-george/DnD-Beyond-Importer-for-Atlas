@@ -14,7 +14,14 @@ export interface Stats {
     [key: string]: Stat;
 }
 
+export interface ActionUses {
+    reset: string;
+    used: number;
+    maximum: number;
+}
+
 export interface CharacterAction {
+    uses?: ActionUses;
     displayOrder?: number;
     save?: string;
     name: string;

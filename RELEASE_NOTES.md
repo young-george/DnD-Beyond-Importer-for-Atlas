@@ -1,5 +1,12 @@
 # Release Notes
 
+## 1.0.8
+- Fix issue with multiline allies/organisations.
+- Improve rendering of Uses checkboxes.
+- Account for base walking speed overrides.
+- Handle the extra ability score increase that can be selected when configuring abilities before selecting a background.
+- Remove colours from ▲A and ▼D icons in statblock, as they are not supported in Atlas Online.
+
 ## 1.0.7
 - Support skill overrides from D&D Beyond. If a skill modifier is overridden in D&D Beyond, the plugin will now import the overridden value instead of the default value.
 - Fix issue where some spells would not show an attack roll.

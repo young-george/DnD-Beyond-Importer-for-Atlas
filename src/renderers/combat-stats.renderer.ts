@@ -5,17 +5,18 @@ export default class CombatStatsRenderer extends AbstractRenderer {
 
     render(): string {
         return `
-initiative: "${Utilities.toModString(this.calculateInitiative())}"
+initiative: "${this.calculateInitiative()}"
 ac: ${this.calculateAC()}
 speed: ${this.calculateSpeed()}`
     }
 
     private calculateInitiative(){
-        return this.character.stats.dex.mod + (this.character.allModifiers?.filter(m => m.type === "bonus" && m.subType === "initiative").reduce((sum, m) => sum + (m.value ?? (m.bonusTypes?.[0] == 1 ? this.character.proficiencyBonus : 0)), 0) ?? 0);
+        return this.character.stats.dex.mod + (this.character.findModifiers("bonus", "initiative").sum(m => m.value ?? (m.bonusTypes?.[0] == 1 ? this.character.proficiencyBonus : 0)) ?? 0);
     }
     
     private calculateSpeed(){
-        return (this.character.raw.race?.weightSpeeds?.normal?.walk ?? 30) + (this.character.allModifiers?.filter(m => m.type === "bonus" && (m.subType === "speed" || m.subType == "unarmored-movement") && m.value != null).reduce((sum, m) => sum + (m.value ?? 0), 0) ?? 0);
+        const innateWalkingSpeed = this.character.findModifiers("set", "innate-speed-walking")?.[0]?.value ?? this.character.raw.race?.weightSpeeds?.normal?.walk ?? 30;
+        return innateWalkingSpeed + (this.character.findModifiers("bonus", ["speed", "unarmored-movement"]).sum(m => m.value) ?? 0);
     }
     
     private calculateAC(): number {
@@ -38,7 +39,7 @@ speed: ${this.calculateSpeed()}`
                     wearingArmor = true;
                     const addDex = def.armorTypeId !== 3;
                     const maxDex = def.armorTypeId === 2 ? 2 : 999;
-                    const ac = def.armorClass + (addDex ? Math.min(this.character.stats.dex.mod, maxDex) : 0) + (this.character.allModifiers.filter(mod => mod.type === "bonus" && mod.subType === "armored-armor-class")?.sum(m => m.value ?? 0) ?? 0);
+                    const ac = def.armorClass + (addDex ? Math.min(this.character.stats.dex.mod, maxDex) : 0) + (this.character.findModifiers("bonus", "armored-armor-class")?.sum(m => m.value ?? 0) ?? 0);
                     if (ac > bestAC) bestAC = ac;
                 }
             }

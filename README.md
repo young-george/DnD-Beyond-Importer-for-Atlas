@@ -27,6 +27,8 @@
 5. Click **Install**, then **Enable**
 6. Configure plugin settings *(optional)*
 
+7. (Recommended) Install the [Force note view mode](https://community.obsidian.md/plugins/obsidian-view-mode-by-frontmatter) plugin. The importer makes use of this plugin to default to 'Reader' view, showing the embedded D&D Beyond page.
+
 ### Manual
 1. Download the latest release zip from the [Releases page](https://github.com/young-george/DnD-Beyond-Importer-for-Atlas/releases) (or build from source below)
 2. Unzip into your vault's plugin directory:
