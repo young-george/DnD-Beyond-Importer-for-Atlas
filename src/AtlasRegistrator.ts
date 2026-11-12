@@ -1,4 +1,4 @@
-import {DdbCharacter} from "./types";
+import {DdbCharacter, DdbInventoryItem} from "./types";
 import {App, Notice} from "obsidian";
 import TurndownService from "turndown";
 
@@ -78,20 +78,37 @@ export default class AtlasRegistrator {
         
         const turndownService = new TurndownService();
         
-        return {[`token-${character.id}`]: {
-            "items": character.inventory?.map(item => ({
-                "id": `${item.id}`.padEnd(24, '0'),
-                "name": item.definition?.name,
-                "description": turndownService.turndown(item.definition?.description || ''),
-                // "description": item.definition?.description,
-                "rarity": item.definition?.rarity ?? null,
-                "type": item.definition?.type ?? null,
-                "tone": item.definition?.rarity?.toLowerCase() ?? null,
-                "properties": [],// item.definition?.properties?.map(p => p.name) ?? [],
-                "at": Date.now(),
-                "price": `${item.definition?.cost} GP`
-            })),
-        }};
+        const groupedByContainer = character.inventory?.reduce((acc, item) => {
+            acc[item.containerEntityId] = acc[item.containerEntityId] || [];
+            acc[item.containerEntityId].push(item);
+            return acc;
+        }, {} as Record<string, DdbInventoryItem[]>) ?? [];
+        
+        const characterId = character.id ?? 0;
+
+        const playerInventory = (groupedByContainer[characterId] ?? []).toSorted((a, b) => (a.definition?.name ?? '').localeCompare(b.definition?.name ?? ''));
+        const characterInventory = Object.entries(groupedByContainer).filter(([key]) => key !== characterId).flatMap(([_, items]) => items.toSorted((a, b) => (a.definition?.name ?? '').localeCompare(b.definition?.name ?? '')))
+
+        console.log([...playerInventory, ...characterInventory].map(i => i.definition?.name));
+
+        
+        return {
+            [`token-${character.id}`]: {
+                "items": [...playerInventory, ...characterInventory].map(item => ({
+                    "id": `${item.id}`.padEnd(24, '0'),
+                    "name": item.definition?.name,
+                    "description": turndownService.turndown(item.definition?.description || ''),
+                    "rarity": item.definition?.rarity ?? null,
+                    "type": item.definition?.type ?? null,
+                    "tone": item.definition?.rarity?.toLowerCase() ?? null,
+                    "properties": [],// item.definition?.properties?.map(p => p.name) ?? [],
+                    "at": Date.now(),
+                    "price": `${item.definition?.cost} GP`
+                }))
+            }
+        }
+        //.toSorted((a, b) => (a.name ?? '').localeCompare(b.name ?? '')),
+        
     }
     
 }

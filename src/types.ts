@@ -123,6 +123,7 @@ export interface DdbClassSpell {
 }
 
 export interface DdbInventoryItem {
+    containerDefinitionKey: any;
     id: number;
     grantedModifiers: DdbModifier[];
     definition?: DdbDefinition;
