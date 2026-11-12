@@ -1,5 +1,11 @@
 # Release Notes
 
+## 1.0.7
+- Support skill overrides from D&D Beyond. If a skill modifier is overridden in D&D Beyond, the plugin will now import the overridden value instead of the default value.
+- Fix issue where some spells would not show an attack roll.
+- Improve support for custom skills.
+- Show selected class feature options, like selected Eldritch Invocations.
+
 ## 1.0.6
 - Improve error handling when checking for the 5e character sheet template.
 
