@@ -148,6 +148,7 @@ export interface DdbRace {
 export interface DdbClassFeature {
     definition?: DdbDefinition;
     levelScale?: { dice: DdbDice };
+    indent?: boolean;
 }
 
 export interface DdbClassDefinition {
@@ -227,6 +228,10 @@ export interface DdbCampaign {
 }
 
 export interface DdbCharacter {
+    options: { class?: {
+        definition: DdbDefinition;
+        componentId: number
+        }[] };
     hair: string;
     skin: string;
     eyes: string;

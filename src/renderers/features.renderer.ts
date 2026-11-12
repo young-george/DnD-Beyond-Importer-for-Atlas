@@ -11,14 +11,27 @@ ${this.renderFeats()}`
     }
     
     renderClassFeatures(): string {
+        
         const availableFeats = this.character.raw.classes
-            ?.flatMap(c => c.classFeatures
-                .filter(f => (f.definition?.requiredLevel ?? 0) <= (c.level ?? 0) && !this.featsToExclude.includes(f.definition?.name ?? ""))
-                .toSorted((a, b) => (a.definition?.displayOrder ?? 0) - (b.definition?.displayOrder ?? 0)) ?? [])
+            ?.flatMap(c => {
+                
+                const classFeatures = c.classFeatures?.flatMap(f => [f, ...(this.character.raw.options?.class?.filter(o => o.componentId === f.definition?.id) ?? []).map(o => ({
+                    ...o, 
+                    indent: true,
+                    definition: {
+                        ...o.definition,
+                        displayOrder: f.definition?.displayOrder ?? 0,
+                    }}
+                ))]) ?? [];
+
+                return classFeatures
+                    .filter(f => (f.definition?.requiredLevel ?? 0) <= (c.level ?? 0) && !this.featsToExclude.includes(f.definition?.name ?? ""))
+                    .toSorted((a, b) => (a.definition?.displayOrder ?? 0) - (b.definition?.displayOrder ?? 0)) ?? []
+            })
             .deduplicate(f => f.definition?.name) ?? [];
         
         return `class_features:
-${availableFeats.map(f => `- name: "${this.character.linkName(f.definition?.name ?? "", f.definition?.description)}"
+${availableFeats.map(f => `- name: "${f.indent ? "&nbsp;&nbsp;&nbsp;&nbsp;" : ""}${this.character.linkName(f.definition?.name ?? "", f.definition?.description)}"
 `).join('')}`
     }
 

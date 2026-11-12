@@ -107,7 +107,7 @@ export default class CharacterSheet {
     }
     
     linkName(name?: string, description?: string): string {
-        if (!this.settings.includeDescriptions){
+        if (!this.settings.includeDescriptions || !description || description.trim() === '') {
             return name ?? '';
         }
         // return name;
