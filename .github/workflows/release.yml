@@ -20,6 +20,13 @@ jobs:
         with:
           node-version: "18.x"
 
+      - name: 'Verify Manifest'
+        uses: cssnr/json-key-value-check-action@v2
+        with:
+          file: manifest.json
+          keys: version
+          values: ${{ github.ref_name }}
+
       - name: Build plugin
         run: |
           npm install --legacy-peer-deps
