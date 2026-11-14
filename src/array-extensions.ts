@@ -11,3 +11,7 @@ Array.prototype.sum = function <T>(
 Array.prototype.deduplicate = function <T>(this: T[], predicate: (value: T) => unknown): T[] {
     return [...new Map(this.map(item => [predicate(item), item])).values()];
 }
+
+Array.prototype.distinct = function <T>(this: T[]): T[] {
+    return [...new Set(this)];
+}

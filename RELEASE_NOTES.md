@@ -1,5 +1,11 @@
 # Release Notes
 
+## 1.0.9
+- Fix issue with reaction spells not appearing.
+- Fix an issue with spells upcasting all the way to level 9.
+- Fix an issue with healing spells not showing dice rolls.
+- Warn the user when the `5e (2024) Character Sheet` template is out of date, offering to update it.
+
 ## 1.0.8
 - Fix issue with multiline allies/organisations.
 - Improve rendering of Uses checkboxes.

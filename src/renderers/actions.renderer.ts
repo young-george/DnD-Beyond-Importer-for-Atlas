@@ -38,7 +38,7 @@ export default class ActionsRenderer extends AbstractRenderer {
             
             const hitSave = a.save ? a.save : atkStr;
 
-            return `- name: "${a.name}"\n  range: "${a.range}"\n  attack: "${hitSave}"\n  damage: "${dmgStr}"\n  type: "${a.damageType}"\n  desc: "${a.notes ?? ''} ${formatUses(a.uses)}"\n`;
+            return `- name: "${a.name}"\n  range: "${a.range}"\n  attack: "${hitSave}"\n  damage: "${dmgStr}"\n  type: "${a.damageType ?? ''}"\n  desc: "${a.notes ?? ''} ${formatUses(a.uses)}"\n`;
         }
 
         let md = `actions:\n`;
@@ -200,7 +200,7 @@ export default class ActionsRenderer extends AbstractRenderer {
         for (const action of [...(this.character.raw.spells?.class ?? []), ...this.character.raw.spells?.feat ?? [], ...this.character.raw.classSpells?.flatMap(cs => cs.spells?.map(s => ({...s, characterClassId: cs.characterClassId})) ?? []) ?? []]) {
             
             if (!action.definition?.requiresAttackRoll || action.definition?.requiresSavingThrow || action.definition?.asPartOfWeaponAttack) {
-                if (action.activation?.activationType != 3) continue;
+                if (action.activation?.activationType != 3 && action.activation?.activationType != 4) continue;
             }
             
             const spellcastingAbilityId = action.spellCastingAbilityId ?? this.character.raw.classes?.find(c => c.id == action.characterClassId)?.definition?.spellCastingAbilityId;
@@ -222,7 +222,7 @@ export default class ActionsRenderer extends AbstractRenderer {
                 attackBonus: action.activation?.activationType === 1 ? spellAttackBonus : null,
                 save: action.definition?.saveDcAbilityId ? `DC${spellSaveDc} ${statKeys[action.definition?.saveDcAbilityId - 1]?.label}` : undefined,
                 spellSaveDc,
-                damageDice: damages.map(d => d.die.diceString?.replace(' + ', '+')).join(" + ") || null,
+                damageDice: damages.map(d => d.die.diceString?.replace(' + ', '+')).distinct().join(" + ") || null,
                 damageBonus: damageBonuses,
                 range: action.range?.rangeValue ? `${action.range?.rangeValue} ft` : (action.range?.origin ?? ''),
                 damageType: damages.map(d => d.friendlySubtypeName).join(", ") || null,
@@ -230,12 +230,10 @@ export default class ActionsRenderer extends AbstractRenderer {
                 isSpell: true,
                 uses: this.getUses(action),
             };
-
+            
             responses[action.activation?.activationType ?? 0]?.push(builtAction);
         }
 
-        responses[3] = responses[3]?.length > 0 ? [{name: 'Spells', range: '', damageDice: '', damageType: '', damageBonus: 0, notes: responses[3].map(a => a.name).join(", ")} as CharacterAction] : [];
-        
         return responses.map(response => response.toSorted((a, b) => a.name.localeCompare(b.name)));
 
     }

@@ -64,7 +64,7 @@ spell_attack_bonus: ${spellAttackBonus >= 0 ? `+${spellAttackBonus}` : `${spellA
         
         const spellTabNames = ['spellcasting', 'tab_2', 'tab_3', 'tab_4', 'tab_5', 'tab_6', 'tab_7', 'tab_8', 'tab_9', 'tab_10'];
 
-        const maximumLevel = this.getSpellSlots()?.length;
+        const maximumLevel = this.getSpellSlots()?.filter(Boolean).length;
         
         const byLevel: Map<number, DdbSpell[]> = new Map();
         for (const spell of allSpells) {
@@ -109,7 +109,7 @@ spell_attack_bonus: ${spellAttackBonus >= 0 ? `+${spellAttackBonus}` : `${spellA
     }
     
     private getDamage(spell: DdbSpell): string {
-
+        
         if (spell.upcastLevel){
             const modifiers = spell.definition?.modifiers.filter(mod => mod.type == 'damage').map(mod => ({baseDice: mod.die, upcastDice: mod.atHigherLevels?.higherLevelDefinitions?.[0]?.dice}));
             
@@ -118,10 +118,10 @@ spell_attack_bonus: ${spellAttackBonus >= 0 ? `+${spellAttackBonus}` : `${spellA
                 return `${diceCount}d${mod.baseDice?.diceValue}`;
             });
             
-            return diceStrings?.join(' + ') ?? "";
+            return Array.from(new Set(diceStrings)).join(" + ") ?? "";
         }
-        
-        const diceStrings = spell.definition?.modifiers.filter(mod => mod.type == 'damage').map(mod => {
+ 
+        const diceStrings = spell.definition?.modifiers.filter(mod => mod.type == 'damage' || (mod.type == 'bonus' && mod.subType == 'hit-points')).map(mod => {
             const atLevel = mod.atHigherLevels?.higherLevelDefinitions?.find(hl => hl.level != 1 && hl.level <= this.character.level)?.dice ?? mod.die;
             return atLevel?.diceString;
         }) ?? []
@@ -130,7 +130,10 @@ spell_attack_bonus: ${spellAttackBonus >= 0 ? `+${spellAttackBonus}` : `${spellA
     }
     
     private getDamageType(spell: DdbSpell): string {
-        return spell.definition?.modifiers.filter(mod => mod.type == 'damage').map(mod => mod.friendlySubtypeName).join(", ") ?? "";
+        return Array.from(new Set([
+                ...spell.definition?.modifiers.filter(mod => mod.type == 'damage').map(mod => mod.friendlySubtypeName),
+                ...spell.definition?.modifiers.filter(mod => mod.type == 'bonus' && mod.subType == 'hit-points').map(mod => 'Healing')
+           ])).join(", ") ?? "";
     }
 
 }
